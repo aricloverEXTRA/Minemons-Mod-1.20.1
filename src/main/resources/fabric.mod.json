@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "minemons",
+  "version": "${version}",
+  "name": "Minemons",
+  "description": "A server-authoritative card battle mod inspired by Minecraft mobs. Collect, duel, and trade Minemons!",
+  "authors": ["MichemonsTeam"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/minemons/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.minemons.MinemonsMain"],
+    "client": ["com.minemons.MinemonsClient"]
+  },
+  "mixins": ["minemons.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.14.22",
+    "fabric-api": "*",
+    "minecraft": "1.20.1",
+    "java": ">=17"
+  }
+}
