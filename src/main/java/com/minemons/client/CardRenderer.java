@@ -4,10 +4,22 @@ import com.minemons.card.*;
 import com.minemons.registry.CardRegistry;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawContext;
+import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.render.entity.EntityRenderDispatcher;
+import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.registry.Registries;
+import org.joml.Quaternionf;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -91,13 +103,14 @@ public class CardRenderer {
 
         // ── Art area ──────────────────────────────────────────────
         ctx.fill(x + padding, artY, x + w - padding, artY + artH, BG_ART);
-        // Texture
-        Identifier tex = TextureManager.get(cardId);
-        try {
-            ctx.drawTexture(tex, x + padding + 1, artY + 1, 0, 0, w - padding * 2 - 2, artH - 2, w - padding * 2 - 2, artH - 2);
-        } catch (Exception ignored) {
-            // Texture missing — draw element symbol fallback
-            ctx.drawCenteredTextWithShadow(tr, getElemSymbol(card), x + w / 2, artY + artH / 2 - 4, elemColor);
+        int artX = x + padding + 1, artY2 = artY + 1, artW = w - padding * 2 - 2, artH2 = artH - 2;
+        if (!drawCardArt(ctx, card, cardId, artX, artY2, artW, artH2)) {
+            Identifier tex = TextureManager.get(cardId);
+            try {
+                ctx.drawTexture(tex, artX, artY2, 0, 0, artW, artH2, artW, artH2);
+            } catch (Exception ignored) {
+                ctx.drawCenteredTextWithShadow(tr, getElemSymbol(card), x + w / 2, artY + artH / 2 - 4, elemColor);
+            }
         }
 
         // HP bar under art (for minemons)
@@ -172,12 +185,14 @@ public class CardRenderer {
             ctx.fill(x + 3, cy + 3, x + 7, cy + 7, elemColor);
 
             // Texture thumbnail
-            Identifier tex = TextureManager.get(cardId);
             int artH = (int)(h * 0.55f);
-            try {
-                ctx.drawTexture(tex, x + 2, cy + 10, 0, 0, w - 4, artH, w - 4, artH);
-            } catch (Exception ignored) {
-                ctx.drawCenteredTextWithShadow(tr, getElemSymbol(card), x + w/2, cy + 10 + artH/2 - 4, elemColor);
+            if (!drawCardArt(ctx, card, cardId, x + 2, cy + 10, w - 4, artH)) {
+                Identifier tex = TextureManager.get(cardId);
+                try {
+                    ctx.drawTexture(tex, x + 2, cy + 10, 0, 0, w - 4, artH, w - 4, artH);
+                } catch (Exception ignored) {
+                    ctx.drawCenteredTextWithShadow(tr, getElemSymbol(card), x + w/2, cy + 10 + artH/2 - 4, elemColor);
+                }
             }
 
             // Name
@@ -206,7 +221,7 @@ public class CardRenderer {
         List<Text> lines = new ArrayList<>();
         lines.add(Text.literal("§e" + card.getDisplayName() + "  §7[" + card.getRarity().displayName + "]"));
         lines.add(Text.literal("§7" + card.getElement().displayName + "  " + card.getType()));
-
+ 
         if (card instanceof MinemonCard mc) {
             String hpStr = hp >= 0 ? hp + "/" + mc.getMaxHp() : String.valueOf(mc.getMaxHp());
             lines.add(Text.literal("§cHP: §f" + hpStr + "   §eATK: §f" + mc.getBaseAttack()));
@@ -224,7 +239,65 @@ public class CardRenderer {
         lines.add(Text.literal("§8" + card.getDescription()));
         ctx.drawTooltip(tr, lines, mx, my);
     }
-
+ 
+    private static boolean drawCardArt(DrawContext ctx, Card card, String cardId, int x, int y, int w, int h) {
+        if (cardId == null) return false;
+        MinecraftClient client = MinecraftClient.getInstance();
+ 
+        if (TextureManager.isEntityArt(cardId) && client.world != null) {
+            EntityType<?> type = TextureManager.getEntityType(cardId);
+            if (type != null) {
+                Entity entity = type.create(client.world);
+                if (entity != null) {
+                    renderEntityArt(ctx, entity, x, y, w, h);
+                    return true;
+                }
+            }
+        }
+ 
+        if (TextureManager.isItemArt(cardId)) {
+            String itemId = TextureManager.getItemId(cardId);
+            if (itemId != null) {
+                renderItemArt(ctx, itemId, x, y, w, h);
+                return true;
+            }
+        }
+ 
+        return false;
+    }
+ 
+    private static void renderEntityArt(DrawContext ctx, Entity entity, int x, int y, int w, int h) {
+        MinecraftClient client = MinecraftClient.getInstance();
+        VertexConsumerProvider.Immediate consumers = ctx.getVertexConsumers();
+        MatrixStack matrices = ctx.getMatrices();
+        matrices.push();
+ 
+        float scale = Math.min(w, h) / 32f;
+        matrices.translate(x + w / 2f, y + h * 0.85f, 100f);
+        matrices.scale(scale, scale, scale);
+        matrices.multiply(new Quaternionf().rotateXYZ((float)Math.toRadians(0), (float)Math.toRadians(90), 0));
+        matrices.multiply(new Quaternionf().rotateXYZ((float)Math.toRadians(-15), 0, 0));
+ 
+        EntityRenderDispatcher dispatcher = client.getEntityRenderDispatcher();
+        dispatcher.setRenderShadows(false);
+        dispatcher.render(entity, 0, 0, 0, (float)Math.toRadians(-90), 1f, matrices, consumers, dispatcher.getLight(entity, 1f));
+        matrices.pop();
+    }
+ 
+    private static void renderItemArt(DrawContext ctx, String itemId, int x, int y, int w, int h) {
+        Identifier itemIdentifier = new Identifier("minecraft", itemId);
+        Item item = Registries.ITEM.get(itemIdentifier);
+        if (item == null || item == Items.AIR) {
+            ctx.drawCenteredTextWithShadow(MinecraftClient.getInstance().textRenderer, "?", x + w / 2, y + h / 2 - 4, TEXT_GRAY);
+            return;
+        }
+        ItemStack stack = new ItemStack(item);
+        int iconSize = Math.min(w, h);
+        int iconX = x + (w - iconSize) / 2;
+        int iconY = y + (h - iconSize) / 2;
+        ctx.drawItem(stack, iconX, iconY);
+    }
+ 
     // ── Helpers ────────────────────────────────────────────────────────────────
 
     public static int getElemColor(Card card) {

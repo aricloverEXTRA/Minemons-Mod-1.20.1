@@ -2,15 +2,21 @@ package com.minemons.client;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.minecraft.entity.EntityType;
 import net.minecraft.util.Identifier;
+import net.minecraft.registry.Registries;
+
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
-/** Maps card IDs to bundled texture Identifiers. */
+/** Maps card IDs to bundled texture Identifiers or model entity information. */
 @Environment(EnvType.CLIENT)
 public class TextureManager {
 
     private static final Map<String, Identifier> TEX = new HashMap<>();
+    private static final Map<String, String> ENTITY_PATH = new HashMap<>();
+    private static final Map<String, String> ITEM_PATH = new HashMap<>();
     public static final Identifier FALLBACK = id("entity/sheep/sheep");
 
     static {
@@ -111,11 +117,53 @@ public class TextureManager {
         e("warm_ocean","entity/dolphin"); e("cherry_grove","entity/bee/bee");
     }
 
-    private static void e(String id, String path) { TEX.put(id, id("textures/" + path + ".png")); }
-    private static void i(String id, String item)  { TEX.put(id, id("textures/item/" + item + ".png")); }
+    private static void e(String id, String path) {
+        TEX.put(id, id("textures/" + path + ".png"));
+        if (path.startsWith("entity/")) ENTITY_PATH.put(id, path);
+    }
+
+    private static void i(String id, String item) {
+        TEX.put(id, id("textures/item/" + item + ".png"));
+        ITEM_PATH.put(id, item);
+    }
+
+    public static String getItemId(String cardId) {
+        return cardId != null ? ITEM_PATH.get(cardId) : null;
+    }
+
     private static Identifier id(String p) { return new Identifier("minemons", p); }
 
     public static Identifier get(String cardId) {
         return cardId != null ? TEX.getOrDefault(cardId, FALLBACK) : FALLBACK;
+    }
+
+    public static boolean isEntityArt(String cardId) {
+        return cardId != null && ENTITY_PATH.containsKey(cardId);
+    }
+
+    public static EntityType<?> getEntityType(String cardId) {
+        if (cardId == null) return null;
+        String path = ENTITY_PATH.get(cardId);
+        if (path == null) return null;
+
+        String local = path.startsWith("entity/") ? path.substring("entity/".length()) : path;
+        if (local.endsWith(".png")) local = local.substring(0, local.length() - 4);
+
+        String candidate = local.contains("/") ? local.substring(local.lastIndexOf('/') + 1) : local;
+        Optional<EntityType<?>> type = Registries.ENTITY_TYPE.getOrEmpty(new Identifier("minecraft", candidate));
+        if (type.isPresent()) return type.get();
+
+        // fall back to category name for grouped textures like chicken/temperate_chicken
+        if (local.contains("/")) {
+            String group = local.substring(0, local.indexOf('/'));
+            return Registries.ENTITY_TYPE.getOrEmpty(new Identifier("minecraft", group)).orElse(null);
+        }
+        return null;
+    }
+
+    public static boolean isItemArt(String cardId) {
+        if (cardId == null) return false;
+        Identifier tex = TEX.get(cardId);
+        return tex != null && tex.getPath().startsWith("textures/item/");
     }
 }
