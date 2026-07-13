@@ -915,4 +915,13 @@ public class CardRegistry {
         for (Card c : ALL_CARDS.values()) if (c.getRarity() == rarity) result.add(c);
         return result;
     }
+
+    /**
+     * Register a custom card dynamically (for modder-added cards from JSON)
+     */
+    public static void registerCard(Card card) {
+        if (card == null) throw new IllegalArgumentException("Card cannot be null");
+        if (card.getId() == null || card.getId().isEmpty()) throw new IllegalArgumentException("Card ID cannot be null or empty");
+        ALL_CARDS.put(card.getId(), card);
+    }
 }

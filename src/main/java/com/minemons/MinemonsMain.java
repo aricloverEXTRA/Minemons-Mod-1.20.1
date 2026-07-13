@@ -1,6 +1,7 @@
 package com.minemons;
 
 import com.minemons.command.MinemonsCommand;
+import com.minemons.data.CardDataLoader;
 import com.minemons.data.PlayerDataManager;
 import com.minemons.network.PacketRegistry;
 import com.minemons.registry.CardRegistry;
@@ -21,6 +22,7 @@ public class MinemonsMain implements ModInitializer {
         LOGGER.info("[Minemons] Initializing...");
 
         CardRegistry.init();
+        CardDataLoader.loadAllCards();
         PacketRegistry.registerServerPackets();
 
         CommandRegistrationCallback.EVENT.register((d, ra, env) -> MinemonsCommand.register(d));

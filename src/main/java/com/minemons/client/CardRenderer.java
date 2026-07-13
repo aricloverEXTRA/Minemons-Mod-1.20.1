@@ -66,12 +66,21 @@ public class CardRenderer {
         if (showBack) { drawCardBack(ctx, x, y, w, h); return; }
 
         Card card = cardId != null ? CardRegistry.getCard(cardId) : null;
+        RarityConfig rarityConfig = card != null ? getRarityConfig(card.getRarity()) : RarityConfig.COMMON;
         int elemColor = getElemColor(card);
-        int borderColor = selected ? 0xFFFFD700 : elemColor;
+        int borderColor = selected ? 0xFFFFD700 : rarityConfig.borderPrimary;
 
-        // Card body
-        fillRounded(ctx, x, y, w, h, BG_CARD);
+        // Draw rarity background gradient
+        drawRarityGradient(ctx, x, y, w, h, rarityConfig);
+
+        // Card body with rarity-aware background
+        fillRounded(ctx, x, y, w, h, rarityConfig.cardBgColor);
         drawRoundedBorder(ctx, x, y, w, h, borderColor, selected ? 2 : 1);
+
+        // Rarity glow effect
+        if (rarityConfig.hasGlow && !selected) {
+            drawGlowEffect(ctx, x, y, w, h, rarityConfig.borderPrimary, rarityConfig.getGlowRadius());
+        }
 
         if (card == null) {
             ctx.drawCenteredTextWithShadow(tr, "§7Empty", x + w / 2, y + h / 2 - 4, TEXT_GRAY);
@@ -92,7 +101,7 @@ public class CardRenderer {
         int maxNameW = w - padding * 2 - 10 - (card instanceof MinemonCard ? 28 : 0);
         while (tr.getWidth(name) > maxNameW && name.length() > 3)
             name = name.substring(0, name.length() - 1);
-        if (!name.equals(card.getDisplayName())) name = name.substring(0, name.length()-2) + "..";
+        if (!name.equals(card.getDisplayName())) name = name.substring(0, Math.max(1, name.length()-2)) + "..";
         ctx.drawTextWithShadow(tr, "§f" + name, x + padding + 9, y + padding + 1, TEXT_WHITE);
 
         // HP for minemons
@@ -105,7 +114,7 @@ public class CardRenderer {
         ctx.fill(x + padding, artY, x + w - padding, artY + artH, BG_ART);
         int artX = x + padding + 1, artY2 = artY + 1, artW = w - padding * 2 - 2, artH2 = artH - 2;
         if (!drawCardArt(ctx, card, cardId, artX, artY2, artW, artH2)) {
-            Identifier tex = TextureManager.get(cardId);
+            Identifier tex = CardAssetManager.getTexture(cardId);
             try {
                 ctx.drawTexture(tex, artX, artY2, 0, 0, artW, artH2, artW, artH2);
             } catch (Exception ignored) {
@@ -148,12 +157,8 @@ public class CardRenderer {
             ctx.drawCenteredTextWithShadow(tr, "§6Place", x + w / 2, infoY, 0xFFFFAA00);
         }
 
-        // Rarity gem bottom-right
-        int[] rarityColors = { 0xFF888888, 0xFF44BB44, 0xFF4488FF, 0xFFAA44FF, 0xFFFFAA00 };
-        if (card.getRarity() != null) {
-            int rc = rarityColors[card.getRarity().ordinal()];
-            ctx.fill(x + w - padding - 5, y + h - padding - 5, x + w - padding, y + h - padding, rc);
-        }
+        // Rarity gem with enhanced effects
+        drawRarityGem(ctx, x + w - padding - 7, y + h - padding - 7, 6, 6, getRarityConfig(card.getRarity()));
 
         // Tooltip on hover
         if (mx >= x && mx < x + w && my >= y && my < y + h)
@@ -173,11 +178,12 @@ public class CardRenderer {
                                      int x, int y, int w, int h,
                                      boolean selected, int mx, int my) {
         Card card = cardId != null ? CardRegistry.getCard(cardId) : null;
+        RarityConfig rarityConfig = card != null ? getRarityConfig(card.getRarity()) : RarityConfig.COMMON;
         int elemColor = getElemColor(card);
         int borderColor = selected ? 0xFFFFD700 : elemColor;
         int cy = selected ? y - 8 : y;
 
-        fillRounded(ctx, x, cy, w, h, BG_CARD);
+        fillRounded(ctx, x, cy, w, h, rarityConfig.cardBgColor);
         drawRoundedBorder(ctx, x, cy, w, h, borderColor, selected ? 2 : 1);
 
         if (card != null) {
@@ -187,7 +193,7 @@ public class CardRenderer {
             // Texture thumbnail
             int artH = (int)(h * 0.55f);
             if (!drawCardArt(ctx, card, cardId, x + 2, cy + 10, w - 4, artH)) {
-                Identifier tex = TextureManager.get(cardId);
+                Identifier tex = CardAssetManager.getTexture(cardId);
                 try {
                     ctx.drawTexture(tex, x + 2, cy + 10, 0, 0, w - 4, artH, w - 4, artH);
                 } catch (Exception ignored) {
@@ -199,7 +205,7 @@ public class CardRenderer {
             String name = card.getDisplayName();
             while (tr.getWidth(name) > w - 4 && name.length() > 2)
                 name = name.substring(0, name.length()-1);
-            if (!name.equals(card.getDisplayName())) name = name.substring(0, name.length()-2) + "..";
+            if (!name.equals(card.getDisplayName())) name = name.substring(0, Math.max(1, name.length()-2)) + "..";
             ctx.drawCenteredTextWithShadow(tr, "§f" + name, x + w / 2, cy + h - 14, TEXT_WHITE);
 
             // Type badge bottom-left
@@ -219,7 +225,8 @@ public class CardRenderer {
     public static void drawCardTooltip(DrawContext ctx, TextRenderer tr, Card card, int hp, int mx, int my) {
         if (card == null) return;
         List<Text> lines = new ArrayList<>();
-        lines.add(Text.literal("§e" + card.getDisplayName() + "  §7[" + card.getRarity().displayName + "]"));
+        RarityConfig rarity = getRarityConfig(card.getRarity());
+        lines.add(Text.literal("§e" + card.getDisplayName() + "  §7[" + rarity.displayName + "]"));
         lines.add(Text.literal("§7" + card.getElement().displayName + "  " + card.getType()));
  
         if (card instanceof MinemonCard mc) {
@@ -243,9 +250,9 @@ public class CardRenderer {
     private static boolean drawCardArt(DrawContext ctx, Card card, String cardId, int x, int y, int w, int h) {
         if (cardId == null) return false;
         MinecraftClient client = MinecraftClient.getInstance();
- 
-        if (TextureManager.isEntityArt(cardId) && client.world != null) {
-            EntityType<?> type = TextureManager.getEntityType(cardId);
+
+        if (CardAssetManager.isEntityArt(cardId) && client.world != null) {
+            EntityType<?> type = CardAssetManager.getEntityType(cardId);
             if (type != null) {
                 Entity entity = type.create(client.world);
                 if (entity != null) {
@@ -254,15 +261,15 @@ public class CardRenderer {
                 }
             }
         }
- 
-        if (TextureManager.isItemArt(cardId)) {
-            String itemId = TextureManager.getItemId(cardId);
+
+        if (CardAssetManager.isItemArt(cardId)) {
+            String itemId = CardAssetManager.getItemId(cardId);
             if (itemId != null) {
                 renderItemArt(ctx, itemId, x, y, w, h);
                 return true;
             }
         }
- 
+
         return false;
     }
  
@@ -309,6 +316,33 @@ public class CardRenderer {
     public static String getElemSymbol(Card card) {
         if (card == null) return "?";
         return card.getElement().symbol;
+    }
+
+    public static RarityConfig getRarityConfig(Rarity rarity) {
+        return RarityConfig.values()[rarity.ordinal()];
+    }
+
+    private static void drawRarityGradient(DrawContext ctx, int x, int y, int w, int h, RarityConfig rarity) {
+        if (rarity.tier <= 1) return;
+        int gradColor = (rarity.borderPrimary & 0x00FFFFFF) | 0x15000000;
+        ctx.fill(x, y, x + w, y + 2, gradColor);
+    }
+
+    private static void drawGlowEffect(DrawContext ctx, int x, int y, int w, int h, int color, int radius) {
+        if (radius <= 0) return;
+        int glowColor = (color & 0x00FFFFFF) | 0x0A000000;
+        for (int i = radius; i > 0; i--) {
+            int alpha = (int)(0x0A * ((float)i / radius));
+            int glowCol = (color & 0x00FFFFFF) | ((alpha << 24) & 0xFF000000);
+            drawRoundedBorder(ctx, x - i, y - i, w + i * 2, h + i * 2, glowCol, 1);
+        }
+    }
+
+    private static void drawRarityGem(DrawContext ctx, int x, int y, int w, int h, RarityConfig rarity) {
+        ctx.fill(x, y, x + w, y + h, rarity.borderPrimary);
+        if (rarity.tier >= 3) {
+            ctx.fill(x + 1, y + 1, x + w - 1, y + h - 1, (rarity.borderPrimary & 0x00FFFFFF) | 0x88000000);
+        }
     }
 
     /** Fills a rectangle with slight rounded corners (2px corners blacked out). */

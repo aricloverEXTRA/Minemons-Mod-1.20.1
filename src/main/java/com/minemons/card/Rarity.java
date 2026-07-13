@@ -1,5 +1,9 @@
 package com.minemons.card;
 
+/**
+ * Rarity enumeration - each rarity has a tier and display properties.
+ * Use RarityConfig for visual configuration.
+ */
 public enum Rarity {
     COMMON(1, 0xAAAAAA, "Common"),
     UNCOMMON(2, 0x55AA55, "Uncommon"),
