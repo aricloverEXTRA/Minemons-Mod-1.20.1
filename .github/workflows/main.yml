@@ -1,0 +1,80 @@
+name: Codex Automated PR Fixer
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  execute-code-changes:
+    # Only triggers if someone comments "@codex" on an open Pull Request
+    if: |
+      github.event.issue.pull_request && 
+      startsWith(github.event.comment.body, '@codex')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+
+    steps:
+      # 1. Look up the exact branch the PR is running on
+      - name: Get PR Branch Context
+        uses: xt0rted/pull-request-comment-branch@v3
+        id: comment-branch
+
+      # 2. Checkout the PR branch so git can track modifications
+      - name: Checkout PR Branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.comment-branch.outputs.head_ref }}
+
+      # 3. Isolate your text prompt from the "@codex" trigger phrase
+      - name: Parse Action Prompt
+        id: parse
+        run: |
+          RAW_PROMPT="${{ github.event.comment.body }}"
+          CLEAN_PROMPT=$(echo "$RAW_PROMPT" | sed 's/^@codex//g' | xargs)
+          echo "prompt=$CLEAN_PROMPT" >> $GITHUB_OUTPUT
+
+      # 4. Run Codex in "unsafe" execution mode to let it manipulate files locally
+      - name: Run Codex Execution
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          safety-strategy: unsafe
+          prompt: |
+            You are a senior Minecraft developer operating directly inside the project workspace.
+            Your objective: Modify the files in this workspace to directly fulfill the user's request.
+            User Request: "${{ steps.parse.outputs.prompt }}"
+            
+            Instructions:
+            - Rewrites, refactors, or new classes must be directly saved to their respective file paths.
+            - Ensure code adheres to standard Java structure for Minecraft modding.
+            - Do not output text conversations; directly apply the filesystem edits.
+
+      # 5. Check if files changed, and if so, push them straight back to the PR branch
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          if [ -n "$(git status --porcelain)" ]; then
+            git add .
+            git commit -m "🤖 Codex: Auto-applied changes from PR comment"
+            git push origin HEAD:${{ steps.comment-branch.outputs.head_ref }}
+          else
+            echo "No files were modified by the prompt."
+          fi
+
+      # 6. Post a success confirmation back onto the comment thread
+      - name: Confirm Execution
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `✅ **Codex Execution Complete:** I have evaluated your prompt and pushed the necessary code fixes directly to this branch!`
+            });
