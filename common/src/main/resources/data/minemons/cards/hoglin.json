@@ -1,0 +1,23 @@
+{
+  "id": "hoglin",
+  "displayName": "Hoglin",
+  "type": "MINEMON",
+  "element": "EMBERA",
+  "rarity": "UNCOMMON",
+  "description": "It charges without mercy \u2014 terrain traps mean nothing to this beast.",
+  "art": {
+    "path": "hoglin/hoglin.png",
+    "type": "entity"
+  },
+  "maxHp": 58,
+  "baseAttack": 15,
+  "passiveAbility": "Aggressive Charge",
+  "passiveDescription": "Ignores one defensive Place card's protection effect.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "evoker",
+  "displayName": "Evoker",
+  "type": "MINEMON",
+  "element": "LUXA",
+  "rarity": "EPIC",
+  "description": "A spellcasting illager that conjures spectral allies into battle.",
+  "art": {
+    "path": "illager/evoker.png",
+    "type": "entity"
+  },
+  "maxHp": 71,
+  "baseAttack": 17,
+  "passiveAbility": "Vex Summon",
+  "passiveDescription": "Summons a Vex token to bench when played. Vex joins fight.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "epic",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

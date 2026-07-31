@@ -1,0 +1,23 @@
+{
+  "id": "parrot",
+  "displayName": "Parrot",
+  "type": "MINEMON",
+  "element": "ATMOSA",
+  "rarity": "RARE",
+  "description": "A feathered echo \u2014 whatever power was last used, it will use it again.",
+  "art": {
+    "path": "parrot/parrot_red.png",
+    "type": "entity"
+  },
+  "maxHp": 43,
+  "baseAttack": 14,
+  "passiveAbility": "Mimic",
+  "passiveDescription": "Copies the last ability used in this match (once per match).",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

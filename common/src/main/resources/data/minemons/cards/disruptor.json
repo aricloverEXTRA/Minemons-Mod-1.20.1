@@ -1,0 +1,19 @@
+{
+  "id": "disruptor",
+  "displayName": "Disruption Wave",
+  "type": "TRAINER",
+  "element": "NEXA",
+  "rarity": "EPIC",
+  "description": "Force opponent to discard 2 cards from their hand.",
+  "art": {
+    "path": "illager/pillager.png",
+    "type": "entity"
+  },
+  "effect": "DISRUPT_OPPONENT",
+  "value": 1,
+  "visualRarity": {
+    "frame": "epic",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

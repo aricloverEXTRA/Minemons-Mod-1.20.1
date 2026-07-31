@@ -1,0 +1,19 @@
+{
+  "id": "revival_herb",
+  "displayName": "Revival Herb",
+  "type": "TRAINER",
+  "element": "NEXA",
+  "rarity": "RARE",
+  "description": "Return a fainted Minemon to the bench with 30 HP.",
+  "art": {
+    "path": "villager/villager.png",
+    "type": "entity"
+  },
+  "effect": "REVIVE_MINEMON",
+  "value": 30,
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

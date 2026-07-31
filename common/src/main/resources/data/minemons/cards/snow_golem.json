@@ -1,0 +1,23 @@
+{
+  "id": "snow_golem",
+  "displayName": "Snow Golem",
+  "type": "MINEMON",
+  "element": "AQUA",
+  "rarity": "UNCOMMON",
+  "description": "Its snowballs don't hurt \u2014 but the knockback ruins an opponent's combo.",
+  "art": {
+    "path": "snow_golem/snow_golem.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 9,
+  "passiveAbility": "Snowball Knock",
+  "passiveDescription": "Pushes attacker back instead of dealing normal damage.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "charged_cow",
+  "displayName": "Charged Cow",
+  "type": "MINEMON",
+  "element": "ELECTRA",
+  "rarity": "UNCOMMON",
+  "description": "Internally electrified. It channels stored energy into its allies.",
+  "art": {
+    "path": "cow/cow.png",
+    "type": "entity"
+  },
+  "maxHp": 50,
+  "baseAttack": 13,
+  "passiveAbility": "Overcharge",
+  "passiveDescription": "Boosts one allied Minemon's next attack by +6.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "tadpole",
+  "displayName": "Tadpole",
+  "type": "MINEMON",
+  "element": "AQUA",
+  "rarity": "COMMON",
+  "description": "Tiny and defenceless \u2014 but it won't stay this way for long.",
+  "art": {
+    "path": "frog/tadpole.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 8,
+  "passiveAbility": "Evolving",
+  "passiveDescription": "Becomes Frog after 2 turns on field.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

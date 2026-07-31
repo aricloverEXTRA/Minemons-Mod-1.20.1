@@ -1,0 +1,23 @@
+{
+  "id": "budding_shard",
+  "displayName": "Budding Shard",
+  "type": "MINEMON",
+  "element": "CRYSTRA",
+  "rarity": "UNCOMMON",
+  "description": "It slowly crystallises \u2014 producing tiny shards that clutter the field.",
+  "art": {
+    "path": "shulker/shulker_purple.png",
+    "type": "entity"
+  },
+  "maxHp": 43,
+  "baseAttack": 12,
+  "passiveAbility": "Grow Token",
+  "passiveDescription": "Spawns a small Crystra Shard token on the bench each turn.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

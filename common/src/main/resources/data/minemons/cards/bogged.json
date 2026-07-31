@@ -1,0 +1,23 @@
+{
+  "id": "bogged",
+  "displayName": "Bogged",
+  "type": "MINEMON",
+  "element": "FLORA",
+  "rarity": "UNCOMMON",
+  "description": "A skeleton spawned from boggy swamps \u2014 its arrows carry a lingering blight.",
+  "art": {
+    "path": "skeleton/skeleton.png",
+    "type": "entity"
+  },
+  "maxHp": 43,
+  "baseAttack": 13,
+  "passiveAbility": "Poison Arrow",
+  "passiveDescription": "Poisons attacker for 3 turns on any successful attack.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

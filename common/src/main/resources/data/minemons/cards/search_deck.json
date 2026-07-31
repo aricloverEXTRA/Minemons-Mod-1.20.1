@@ -1,0 +1,19 @@
+{
+  "id": "search_deck",
+  "displayName": "Card Search",
+  "type": "TRAINER",
+  "element": "NEXA",
+  "rarity": "RARE",
+  "description": "Search your deck for any 1 card and add it to your hand.",
+  "art": {
+    "path": "villager/villager.png",
+    "type": "entity"
+  },
+  "effect": "SEARCH_DECK",
+  "value": 1,
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

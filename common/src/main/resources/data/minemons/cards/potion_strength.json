@@ -1,0 +1,20 @@
+{
+  "id": "potion_strength",
+  "displayName": "Strength Potion",
+  "type": "CONSUMABLE",
+  "element": "EMBERA",
+  "rarity": "UNCOMMON",
+  "description": "Boost active Minemon's attack by 8 for 2 turns.",
+  "art": {
+    "path": "items/potion_bottle_empty.png",
+    "type": "item"
+  },
+  "effect": "ATTACK_BOOST",
+  "value": 8,
+  "duration": 2,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

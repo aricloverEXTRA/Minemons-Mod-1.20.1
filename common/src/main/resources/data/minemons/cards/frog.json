@@ -1,0 +1,23 @@
+{
+  "id": "frog",
+  "displayName": "Frog",
+  "type": "MINEMON",
+  "element": "AQUA",
+  "rarity": "COMMON",
+  "description": "A swampy snapper. If the opponent's card has low HP, it devours it whole.",
+  "art": {
+    "path": "frog/frog_orange.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 9,
+  "passiveAbility": "Tongue Snatch",
+  "passiveDescription": "Eats small-HP Minemons for +1 card draw on KO.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "villager",
+  "displayName": "Villager",
+  "type": "MINEMON",
+  "element": "LUXA",
+  "rarity": "COMMON",
+  "description": "It drives a hard bargain. Even in battle, it turns average cards into great ones.",
+  "art": {
+    "path": "villager/villager.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 8,
+  "passiveAbility": "Trade Up",
+  "passiveDescription": "On summon, convert one card in hand to a random card of higher rarity.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

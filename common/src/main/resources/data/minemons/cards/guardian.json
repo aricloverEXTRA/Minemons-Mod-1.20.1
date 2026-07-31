@@ -1,0 +1,23 @@
+{
+  "id": "guardian",
+  "displayName": "Guardian",
+  "type": "MINEMON",
+  "element": "AQUA",
+  "rarity": "RARE",
+  "description": "Ancient aquatic guardian. Its laser eye and spiky body punish close-range attackers.",
+  "art": {
+    "path": "guardian/guardian.png",
+    "type": "entity"
+  },
+  "maxHp": 70,
+  "baseAttack": 16,
+  "passiveAbility": "Thorn Counter",
+  "passiveDescription": "Deals 5 counter-damage to any Minemon that physically attacks it.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

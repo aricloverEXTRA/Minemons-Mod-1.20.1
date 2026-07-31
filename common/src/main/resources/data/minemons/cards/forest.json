@@ -1,0 +1,20 @@
+{
+  "id": "forest",
+  "displayName": "Forest",
+  "type": "PLACE",
+  "element": "FLORA",
+  "rarity": "COMMON",
+  "description": "Flora cards gain +2 ATK while this field is active.",
+  "art": {
+    "path": "entity/chicken/chicken.png",
+    "type": "entity"
+  },
+  "effect": "BOOST_ELEMENT",
+  "affectedElement": "FLORA",
+  "value": 2,
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

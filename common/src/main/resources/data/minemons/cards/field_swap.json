@@ -1,0 +1,19 @@
+{
+  "id": "field_swap",
+  "displayName": "Field Swap",
+  "type": "TRAINER",
+  "element": "NEXA",
+  "rarity": "COMMON",
+  "description": "Move any benched Minemon to the active slot.",
+  "art": {
+    "path": "villager/villager.png",
+    "type": "entity"
+  },
+  "effect": "SWAP_FIELD",
+  "value": 1,
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "wither_remnant",
+  "displayName": "Wither Remnant",
+  "type": "MINEMON",
+  "element": "EMBERA",
+  "rarity": "MYTHIC",
+  "description": "What remains of the Wither. It corrodes everything it touches.",
+  "art": {
+    "path": "wither/wither_armor.png",
+    "type": "entity"
+  },
+  "maxHp": 118,
+  "baseAttack": 24,
+  "passiveAbility": "Wither Stat Decay",
+  "passiveDescription": "Decays one opponent stat per turn. Deals 21 base ATK.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "mythic",
+    "shine": true,
+    "shinyVariant": true
+  }
+}

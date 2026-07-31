@@ -1,0 +1,23 @@
+{
+  "id": "vindicator",
+  "displayName": "Vindicator",
+  "type": "MINEMON",
+  "element": "TERRA",
+  "rarity": "RARE",
+  "description": "It comes with an axe and a grudge. Every fallen ally makes it angrier.",
+  "art": {
+    "path": "illager/vindicator.png",
+    "type": "entity"
+  },
+  "maxHp": 68,
+  "baseAttack": 20,
+  "passiveAbility": "Johnny",
+  "passiveDescription": "Gains +4 ATK if any Minemon on field has been KO'd this match.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

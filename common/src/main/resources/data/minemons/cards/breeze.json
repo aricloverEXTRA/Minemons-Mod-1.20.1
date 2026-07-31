@@ -1,0 +1,23 @@
+{
+  "id": "breeze",
+  "displayName": "Breeze",
+  "type": "MINEMON",
+  "element": "ATMOSA",
+  "rarity": "RARE",
+  "description": "A wind construct that deflects rather than destroys, buying precious time.",
+  "art": {
+    "path": "breeze/breeze.png",
+    "type": "entity"
+  },
+  "maxHp": 51,
+  "baseAttack": 15,
+  "passiveAbility": "Wind Knock",
+  "passiveDescription": "Knocks opponent back instead of dealing standard damage.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

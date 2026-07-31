@@ -1,0 +1,23 @@
+{
+  "id": "iron_golem",
+  "displayName": "Iron Golem",
+  "type": "MINEMON",
+  "element": "TERRA",
+  "rarity": "EPIC",
+  "description": "Legendary village guardian. Its iron fists and undying loyalty are unmatched.",
+  "art": {
+    "path": "iron_golem/iron_golem.png",
+    "type": "entity"
+  },
+  "maxHp": 110,
+  "baseAttack": 21,
+  "passiveAbility": "Protector",
+  "passiveDescription": "Guards the active Minemon \u2014 takes hits in its place once per turn.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "epic",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

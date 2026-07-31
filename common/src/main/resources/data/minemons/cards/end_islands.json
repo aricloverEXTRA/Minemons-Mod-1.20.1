@@ -1,0 +1,20 @@
+{
+  "id": "end_islands",
+  "displayName": "End Islands",
+  "type": "PLACE",
+  "element": "COSMA",
+  "rarity": "EPIC",
+  "description": "Prize cards cost 1 more to claim but Cosma cards gain +2 ATK.",
+  "art": {
+    "path": "entity/ender_dragon/ender_dragon.png",
+    "type": "entity"
+  },
+  "effect": "EXTRA_PRIZE_ON_KO",
+  "affectedElement": null,
+  "value": 1,
+  "visualRarity": {
+    "frame": "epic",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

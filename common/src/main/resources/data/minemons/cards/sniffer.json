@@ -1,0 +1,23 @@
+{
+  "id": "sniffer",
+  "displayName": "Sniffer",
+  "type": "MINEMON",
+  "element": "FLORA",
+  "rarity": "RARE",
+  "description": "Its ancient nose detects buried resources \u2014 and the right card at the right time.",
+  "art": {
+    "path": "sniffer/sniffer.png",
+    "type": "entity"
+  },
+  "maxHp": 65,
+  "baseAttack": 11,
+  "passiveAbility": "Ancient Dig",
+  "passiveDescription": "On summon, pulls a random Place or Consumable from deck.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

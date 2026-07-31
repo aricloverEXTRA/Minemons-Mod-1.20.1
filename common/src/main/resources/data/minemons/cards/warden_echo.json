@@ -1,0 +1,23 @@
+{
+  "id": "warden_echo",
+  "displayName": "Warden Echo",
+  "type": "MINEMON",
+  "element": "COSMA",
+  "rarity": "MYTHIC",
+  "description": "The echo of the deep. Its power is so immense it gives a warning before striking.",
+  "art": {
+    "path": "warden/warden.png",
+    "type": "entity"
+  },
+  "maxHp": 125,
+  "baseAttack": 24,
+  "passiveAbility": "Sonic Boom",
+  "passiveDescription": "Telegraphs a massive hit \u2014 opponent gets 1 turn to prepare.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "mythic",
+    "shine": true,
+    "shinyVariant": true
+  }
+}

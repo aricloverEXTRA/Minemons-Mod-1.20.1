@@ -1,0 +1,23 @@
+{
+  "id": "ender_dragon_hatchling",
+  "displayName": "Dragon Hatchling",
+  "type": "MINEMON",
+  "element": "COSMA",
+  "rarity": "MYTHIC",
+  "description": "A tiny but terrifying hatchling. The Cosma element bends around its presence.",
+  "art": {
+    "path": "ender_dragon/ender_dragon.png",
+    "type": "entity"
+  },
+  "maxHp": 125,
+  "baseAttack": 24,
+  "passiveAbility": "Dragon Breath",
+  "passiveDescription": "Deals 10 AOE to all opponent bench Minemons.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "mythic",
+    "shine": true,
+    "shinyVariant": true
+  }
+}

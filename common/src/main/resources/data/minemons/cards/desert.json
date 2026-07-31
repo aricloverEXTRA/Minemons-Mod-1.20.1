@@ -1,0 +1,20 @@
+{
+  "id": "desert",
+  "displayName": "Desert",
+  "type": "PLACE",
+  "element": "TERRA",
+  "rarity": "UNCOMMON",
+  "description": "Aqua-type passives are disabled while this Place is active.",
+  "art": {
+    "path": "entity/husk/husk.png",
+    "type": "entity"
+  },
+  "effect": "WEAKEN_ELEMENT",
+  "affectedElement": "AQUA",
+  "value": 0,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

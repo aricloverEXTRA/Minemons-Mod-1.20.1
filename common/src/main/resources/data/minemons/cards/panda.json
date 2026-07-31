@@ -1,0 +1,23 @@
+{
+  "id": "panda",
+  "displayName": "Panda",
+  "type": "MINEMON",
+  "element": "FLORA",
+  "rarity": "UNCOMMON",
+  "description": "Lazily powerful \u2014 its random sneezes are startlingly effective.",
+  "art": {
+    "path": "panda/panda.png",
+    "type": "entity"
+  },
+  "maxHp": 58,
+  "baseAttack": 10,
+  "passiveAbility": "Sneeze Stun",
+  "passiveDescription": "10% chance to stun enemy for 1 turn per attack.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "potion_weakness",
+  "displayName": "Weakness Potion",
+  "type": "CONSUMABLE",
+  "element": "COSMA",
+  "rarity": "UNCOMMON",
+  "description": "Reduce opponent active Minemon's attack by 6 for 2 turns.",
+  "art": {
+    "path": "items/potion_bottle_empty.png",
+    "type": "item"
+  },
+  "effect": "DEBUFF_ENEMY",
+  "value": 6,
+  "duration": 2,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

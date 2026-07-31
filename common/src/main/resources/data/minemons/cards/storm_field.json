@@ -1,0 +1,20 @@
+{
+  "id": "storm_field",
+  "displayName": "Storm Field",
+  "type": "PLACE",
+  "element": "ELECTRA",
+  "rarity": "UNCOMMON",
+  "description": "Electra cards gain +2 ATK. Atmosa effects are 50% less effective.",
+  "art": {
+    "path": "entity/chicken/chicken.png",
+    "type": "entity"
+  },
+  "effect": "BOOST_ELEMENT",
+  "affectedElement": "ELECTRA",
+  "value": 2,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

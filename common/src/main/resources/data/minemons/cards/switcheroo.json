@@ -1,0 +1,19 @@
+{
+  "id": "switcheroo",
+  "displayName": "Switcheroo",
+  "type": "TRAINER",
+  "element": "NEXA",
+  "rarity": "COMMON",
+  "description": "Swap your active and one benched Minemon without losing the action.",
+  "art": {
+    "path": "villager/villager.png",
+    "type": "entity"
+  },
+  "effect": "SWAP_FIELD",
+  "value": 1,
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

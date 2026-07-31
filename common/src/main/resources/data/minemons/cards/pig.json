@@ -1,0 +1,23 @@
+{
+  "id": "pig",
+  "displayName": "Pig",
+  "type": "MINEMON",
+  "element": "NEXA",
+  "rarity": "COMMON",
+  "description": "Simple but scrappy. A reliable budget attacker for any deck.",
+  "art": {
+    "path": "pig/pig.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 11,
+  "passiveAbility": "Oink Charge",
+  "passiveDescription": "Can deal 1 extra attack at half damage once per match.",
+  "neutralEnergy": true,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

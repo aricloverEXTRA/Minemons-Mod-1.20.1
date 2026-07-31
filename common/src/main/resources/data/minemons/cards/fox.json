@@ -1,0 +1,23 @@
+{
+  "id": "fox",
+  "displayName": "Fox",
+  "type": "MINEMON",
+  "element": "FLORA",
+  "rarity": "UNCOMMON",
+  "description": "Cunning and quick, it sniffs out what the opponent has planned.",
+  "art": {
+    "path": "fox/fox.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 13,
+  "passiveAbility": "Sly Peek",
+  "passiveDescription": "On summon, peek at opponent's top 2 deck cards.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

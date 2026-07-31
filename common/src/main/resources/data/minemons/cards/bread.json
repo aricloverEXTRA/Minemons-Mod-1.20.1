@@ -1,0 +1,20 @@
+{
+  "id": "bread",
+  "displayName": "Bread",
+  "type": "CONSUMABLE",
+  "element": "NEXA",
+  "rarity": "COMMON",
+  "description": "Restore 8 HP to active Minemon. Cheap and reliable.",
+  "art": {
+    "path": "items/bread.png",
+    "type": "item"
+  },
+  "effect": "HEAL",
+  "value": 8,
+  "duration": 0,
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

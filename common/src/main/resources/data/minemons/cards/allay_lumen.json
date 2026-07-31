@@ -1,0 +1,23 @@
+{
+  "id": "allay_lumen",
+  "displayName": "Allay Lumen",
+  "type": "MINEMON",
+  "element": "LUXA",
+  "rarity": "RARE",
+  "description": "A luminous guardian that bounces bad energy right back at its source.",
+  "art": {
+    "path": "allay/allay.png",
+    "type": "entity"
+  },
+  "maxHp": 43,
+  "baseAttack": 13,
+  "passiveAbility": "Redirect",
+  "passiveDescription": "Sends one debuff back to whoever cast it.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

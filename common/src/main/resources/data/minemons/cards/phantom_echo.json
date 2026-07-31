@@ -1,0 +1,23 @@
+{
+  "id": "phantom_echo",
+  "displayName": "Phantom Echo",
+  "type": "MINEMON",
+  "element": "COSMA",
+  "rarity": "RARE",
+  "description": "A ghost of what once was \u2014 it channels the fallen's final power.",
+  "art": {
+    "path": "phantom/phantom.png",
+    "type": "entity"
+  },
+  "maxHp": 49,
+  "baseAttack": 15,
+  "passiveAbility": "Echo Copy",
+  "passiveDescription": "Copies the last fainted Minemon's passive for one turn.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

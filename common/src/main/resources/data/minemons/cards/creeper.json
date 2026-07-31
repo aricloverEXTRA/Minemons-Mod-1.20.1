@@ -1,0 +1,23 @@
+{
+  "id": "creeper",
+  "displayName": "Creeper",
+  "type": "MINEMON",
+  "element": "ELECTRA",
+  "rarity": "UNCOMMON",
+  "description": "The most feared Minemon on the field. Nobody wants to be near it when it goes.",
+  "art": {
+    "path": "creeper/creeper.png",
+    "type": "entity"
+  },
+  "maxHp": 43,
+  "baseAttack": 17,
+  "passiveAbility": "Self-Destruct",
+  "passiveDescription": "Can deal 30 AOE damage to opponent's field but faints itself.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "crimson_forest",
+  "displayName": "Crimson Forest",
+  "type": "PLACE",
+  "element": "EMBERA",
+  "rarity": "RARE",
+  "description": "Both active Minemons take 3 chip damage per turn (hostile terrain).",
+  "art": {
+    "path": "entity/hoglin/hoglin.png",
+    "type": "entity"
+  },
+  "effect": "CHIP_DAMAGE_BOTH",
+  "affectedElement": null,
+  "value": 3,
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "evolution_crystal",
+  "displayName": "Evolution Crystal",
+  "type": "TRAINER",
+  "element": "NEXA",
+  "rarity": "RARE",
+  "description": "Permanently buff one Minemon's element by +1 tier for this match.",
+  "art": {
+    "path": "shulker/shulker_purple.png",
+    "type": "entity"
+  },
+  "effect": "BUFF_ELEMENT",
+  "value": 1,
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

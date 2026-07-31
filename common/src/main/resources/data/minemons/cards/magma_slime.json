@@ -1,0 +1,23 @@
+{
+  "id": "magma_slime",
+  "displayName": "Magma Slime",
+  "type": "MINEMON",
+  "element": "EMBERA",
+  "rarity": "UNCOMMON",
+  "description": "It absorbs magma and multiplies. Defeating it just makes more problems.",
+  "art": {
+    "path": "slime/magma_cube.png",
+    "type": "entity"
+  },
+  "maxHp": 51,
+  "baseAttack": 13,
+  "passiveAbility": "Split",
+  "passiveDescription": "When defeated, summons two 20-HP Slime tokens to the bench.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

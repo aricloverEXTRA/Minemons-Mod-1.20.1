@@ -1,0 +1,23 @@
+{
+  "id": "iron_colossus",
+  "displayName": "Iron Colossus",
+  "type": "MINEMON",
+  "element": "TERRA",
+  "rarity": "EPIC",
+  "description": "Towering and immovable. An entire bench shelters behind its shadow.",
+  "art": {
+    "path": "iron_golem/iron_golem.png",
+    "type": "entity"
+  },
+  "maxHp": 110,
+  "baseAttack": 20,
+  "passiveAbility": "Full Guard",
+  "passiveDescription": "Protects entire bench from single-target effects for 1 turn.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "epic",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "turtle",
+  "displayName": "Turtle",
+  "type": "MINEMON",
+  "element": "AQUA",
+  "rarity": "UNCOMMON",
+  "description": "Slow but near-impenetrable. It outlasts flashy opponents with patience.",
+  "art": {
+    "path": "turtle/big_sea_turtle.png",
+    "type": "entity"
+  },
+  "maxHp": 73,
+  "baseAttack": 9,
+  "passiveAbility": "Shell Shield",
+  "passiveDescription": "Blocks one attack's damage completely once per match.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

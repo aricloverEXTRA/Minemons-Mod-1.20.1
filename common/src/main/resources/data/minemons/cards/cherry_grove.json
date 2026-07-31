@@ -1,0 +1,20 @@
+{
+  "id": "cherry_grove",
+  "displayName": "Cherry Grove",
+  "type": "PLACE",
+  "element": "LUXA",
+  "rarity": "UNCOMMON",
+  "description": "Active card heals 1 HP at the start of each turn.",
+  "art": {
+    "path": "entity/chicken/chicken.png",
+    "type": "entity"
+  },
+  "effect": "HEAL_ACTIVE_TURN",
+  "affectedElement": null,
+  "value": 1,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

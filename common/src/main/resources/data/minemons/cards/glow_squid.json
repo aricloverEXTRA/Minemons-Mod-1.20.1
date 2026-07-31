@@ -1,0 +1,23 @@
+{
+  "id": "glow_squid",
+  "displayName": "Glow Squid",
+  "type": "MINEMON",
+  "element": "LUXA",
+  "rarity": "UNCOMMON",
+  "description": "Its bioluminescent glow pierces through any opponent's veil of secrecy.",
+  "art": {
+    "path": "squid/glow_squid.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 11,
+  "passiveAbility": "Illuminate",
+  "passiveDescription": "Reveals one random card from opponent's hand.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

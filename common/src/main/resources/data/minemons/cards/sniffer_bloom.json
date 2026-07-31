@@ -1,0 +1,23 @@
+{
+  "id": "sniffer_bloom",
+  "displayName": "Sniffer Bloom",
+  "type": "MINEMON",
+  "element": "FLORA",
+  "rarity": "RARE",
+  "description": "Patient and steady \u2014 the longer it stands, the more powerful it becomes.",
+  "art": {
+    "path": "sniffer/sniffer.png",
+    "type": "entity"
+  },
+  "maxHp": 61,
+  "baseAttack": 13,
+  "passiveAbility": "Grow",
+  "passiveDescription": "Gains +2 ATK and +2 HP every turn it remains active.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

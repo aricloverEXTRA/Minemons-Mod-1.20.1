@@ -1,0 +1,23 @@
+{
+  "id": "dolphin",
+  "displayName": "Dolphin",
+  "type": "MINEMON",
+  "element": "AQUA",
+  "rarity": "UNCOMMON",
+  "description": "Its joyful leaps grant nearby water-types a burst of momentum.",
+  "art": {
+    "path": "dolphin/dolphin.png",
+    "type": "entity"
+  },
+  "maxHp": 48,
+  "baseAttack": 13,
+  "passiveAbility": "Aqua Boost",
+  "passiveDescription": "Increases turn order speed of all allied Aqua cards.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

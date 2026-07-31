@@ -1,0 +1,20 @@
+{
+  "id": "swamp",
+  "displayName": "Swamp",
+  "type": "PLACE",
+  "element": "FLORA",
+  "rarity": "UNCOMMON",
+  "description": "Status effects last 1 extra turn.",
+  "art": {
+    "path": "entity/witch/witch.png",
+    "type": "entity"
+  },
+  "effect": "STATUS_EXTEND",
+  "affectedElement": null,
+  "value": 1,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "iron_sheep",
+  "displayName": "Iron Sheep",
+  "type": "MINEMON",
+  "element": "TERRA",
+  "rarity": "UNCOMMON",
+  "description": "Its metallic wool is harvested for armour. Crystals shatter against it.",
+  "art": {
+    "path": "sheep/sheep.png",
+    "type": "entity"
+  },
+  "maxHp": 58,
+  "baseAttack": 12,
+  "passiveAbility": "Metal Wool",
+  "passiveDescription": "Strong against CRYSTRA \u2014 reduces Crystra damage by 25%.",
+  "neutralEnergy": true,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

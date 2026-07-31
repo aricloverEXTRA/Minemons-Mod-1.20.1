@@ -1,0 +1,20 @@
+{
+  "id": "meadow",
+  "displayName": "Meadow",
+  "type": "PLACE",
+  "element": "FLORA",
+  "rarity": "COMMON",
+  "description": "Healing consumables restore +50% more HP.",
+  "art": {
+    "path": "entity/chicken/chicken.png",
+    "type": "entity"
+  },
+  "effect": "BOOST_HEAL",
+  "affectedElement": null,
+  "value": 1,
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

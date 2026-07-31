@@ -1,0 +1,20 @@
+{
+  "id": "volcano",
+  "displayName": "Volcano",
+  "type": "PLACE",
+  "element": "EMBERA",
+  "rarity": "UNCOMMON",
+  "description": "Embera cards gain +3 ATK. Aqua passives are reduced.",
+  "art": {
+    "path": "entity/blaze/blaze.png",
+    "type": "entity"
+  },
+  "effect": "BOOST_ELEMENT",
+  "affectedElement": "EMBERA",
+  "value": 3,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

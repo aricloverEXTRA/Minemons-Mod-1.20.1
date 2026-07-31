@@ -1,0 +1,23 @@
+{
+  "id": "warden_sprout",
+  "displayName": "Warden Sprout",
+  "type": "MINEMON",
+  "element": "FLORA",
+  "rarity": "EPIC",
+  "description": "A tiny echo of the Warden \u2014 it senses everything that's hidden.",
+  "art": {
+    "path": "warden/warden.png",
+    "type": "entity"
+  },
+  "maxHp": 89,
+  "baseAttack": 17,
+  "passiveAbility": "Sense",
+  "passiveDescription": "Reveals all face-down Trainer tricks in opponent's hand.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "epic",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

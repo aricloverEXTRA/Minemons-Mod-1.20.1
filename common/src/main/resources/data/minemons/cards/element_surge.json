@@ -1,0 +1,19 @@
+{
+  "id": "element_surge",
+  "displayName": "Element Surge",
+  "type": "TRAINER",
+  "element": "NEXA",
+  "rarity": "RARE",
+  "description": "Boost one element's damage output by 25% for 2 turns.",
+  "art": {
+    "path": "villager/villager.png",
+    "type": "entity"
+  },
+  "effect": "BUFF_ELEMENT",
+  "value": 2,
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

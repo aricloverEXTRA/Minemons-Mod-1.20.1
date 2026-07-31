@@ -1,0 +1,19 @@
+{
+  "id": "trading_post",
+  "displayName": "Trading Post",
+  "type": "TRAINER",
+  "element": "NEXA",
+  "rarity": "UNCOMMON",
+  "description": "Search your deck for up to 2 Consumable cards.",
+  "art": {
+    "path": "villager/wandering_trader.png",
+    "type": "entity"
+  },
+  "effect": "SEARCH_DECK",
+  "value": 2,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "silverfish",
+  "displayName": "Silverfish",
+  "type": "MINEMON",
+  "element": "TERRA",
+  "rarity": "COMMON",
+  "description": "Insignificant alone \u2014 but left unchecked, it fills the field quickly.",
+  "art": {
+    "path": "silverfish/silverfish.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 8,
+  "passiveAbility": "Multiply",
+  "passiveDescription": "Summons a second Silverfish token on the bench each turn it survives.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

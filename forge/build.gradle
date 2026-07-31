@@ -1,0 +1,41 @@
+plugins {
+    id 'net.minecraftforge.gradle' version '6.0.24'
+    id 'maven-publish'
+}
+
+base {
+    archivesName = 'minemons-forge'
+}
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.20.1-47.4.0'
+}
+
+sourceSets.main.resources.srcDir project(':common').file('src/main/resources')
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('META-INF/mods.toml') {
+        expand 'version': project.version
+    }
+}
+
+jar {
+    manifest {
+        attributes([
+            'Specification-Title': 'minemons',
+            'Specification-Vendor': 'MichemonsTeam',
+            'Specification-Version': '1',
+            'Implementation-Title': project.name,
+            'Implementation-Version': project.version,
+            'Implementation-Vendor': 'MichemonsTeam'
+        ])
+    }
+    if (rootProject.file('LICENSE').exists()) {
+        from(rootProject.file('LICENSE')) { rename { "${it}_minemons-forge" } }
+    }
+}

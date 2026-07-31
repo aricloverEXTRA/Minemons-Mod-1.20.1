@@ -1,0 +1,23 @@
+{
+  "id": "tropical_fish",
+  "displayName": "Tropical Fish",
+  "type": "MINEMON",
+  "element": "AQUA",
+  "rarity": "COMMON",
+  "description": "Its vivid colours are dazzling \u2014 and briefly disorienting to look at.",
+  "art": {
+    "path": "fish/tropical_fish_a.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 8,
+  "passiveAbility": "Dazzle",
+  "passiveDescription": "20% chance to confuse attacker for 1 turn (bright colours disorient).",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

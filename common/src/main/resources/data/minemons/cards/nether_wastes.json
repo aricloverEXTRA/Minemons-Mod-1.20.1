@@ -1,0 +1,20 @@
+{
+  "id": "nether_wastes",
+  "displayName": "Nether Wastes",
+  "type": "PLACE",
+  "element": "EMBERA",
+  "rarity": "UNCOMMON",
+  "description": "Embera cards are immune to Aqua elemental advantage here.",
+  "art": {
+    "path": "entity/strider/strider.png",
+    "type": "entity"
+  },
+  "effect": "BOOST_ELEMENT",
+  "affectedElement": "EMBERA",
+  "value": 0,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

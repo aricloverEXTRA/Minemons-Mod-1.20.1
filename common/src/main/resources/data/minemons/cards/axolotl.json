@@ -1,0 +1,23 @@
+{
+  "id": "axolotl",
+  "displayName": "Axolotl",
+  "type": "MINEMON",
+  "element": "AQUA",
+  "rarity": "RARE",
+  "description": "It plays dead when knocked out, then crawls back with renewed vigour.",
+  "art": {
+    "path": "axolotl/axolotl.png",
+    "type": "entity"
+  },
+  "maxHp": 51,
+  "baseAttack": 14,
+  "passiveAbility": "Play Dead",
+  "passiveDescription": "Regenerates 20 HP when revived from fainted state.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

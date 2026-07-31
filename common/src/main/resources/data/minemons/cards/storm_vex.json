@@ -1,0 +1,23 @@
+{
+  "id": "storm_vex",
+  "displayName": "Storm Vex",
+  "type": "MINEMON",
+  "element": "ELECTRA",
+  "rarity": "RARE",
+  "description": "It zips and jolts unpredictably. Locking onto it is nearly impossible.",
+  "art": {
+    "path": "vex/vex.png",
+    "type": "entity"
+  },
+  "maxHp": 48,
+  "baseAttack": 17,
+  "passiveAbility": "Erratic",
+  "passiveDescription": "Hard to target with single-target effects \u2014 30% dodge chance.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

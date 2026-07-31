@@ -1,0 +1,23 @@
+{
+  "id": "bee",
+  "displayName": "Bee",
+  "type": "MINEMON",
+  "element": "FLORA",
+  "rarity": "UNCOMMON",
+  "description": "Fragile but fierce \u2014 attackers regret touching this buzzing guardian.",
+  "art": {
+    "path": "bee/bee.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 13,
+  "passiveAbility": "Counter-Sting",
+  "passiveDescription": "When hit, poisons attacker for 2 turns. Dies after stinging.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

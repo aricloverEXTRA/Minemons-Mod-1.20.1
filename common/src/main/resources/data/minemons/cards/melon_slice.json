@@ -1,0 +1,20 @@
+{
+  "id": "melon_slice",
+  "displayName": "Melon Slice",
+  "type": "CONSUMABLE",
+  "element": "FLORA",
+  "rarity": "COMMON",
+  "description": "Heal 6 HP. Refreshing and light.",
+  "art": {
+    "path": "items/melon_slice.png",
+    "type": "item"
+  },
+  "effect": "HEAL",
+  "value": 6,
+  "duration": 0,
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}
