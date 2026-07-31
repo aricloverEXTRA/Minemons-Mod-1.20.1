@@ -1,0 +1,23 @@
+{
+  "id": "water_sheep",
+  "displayName": "Water Sheep",
+  "type": "MINEMON",
+  "element": "AQUA",
+  "rarity": "COMMON",
+  "description": "A sheep that wandered into a river one too many times. Now thrives in water.",
+  "art": {
+    "path": "sheep/sheep.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 9,
+  "passiveAbility": "Flood Synergy",
+  "passiveDescription": "Gets +3 ATK when Place: Flood is active.",
+  "neutralEnergy": true,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "prof_sprout",
+  "displayName": "Professor Sprout's Research",
+  "type": "TRAINER",
+  "element": "NEXA",
+  "rarity": "UNCOMMON",
+  "description": "Draw 3 cards from your deck.",
+  "art": {
+    "path": "villager/villager.png",
+    "type": "entity"
+  },
+  "effect": "DRAW_CARDS",
+  "value": 3,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

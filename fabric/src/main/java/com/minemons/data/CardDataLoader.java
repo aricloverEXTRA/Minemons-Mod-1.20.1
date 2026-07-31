@@ -49,20 +49,42 @@ public class CardDataLoader {
      * Load built-in cards from the packaged data-driven card file.
      */
     private static void loadBuiltinCards() {
-        String resourcePath = "/data/minemons/cards/builtin_cards.json";
-        try (InputStream stream = CardDataLoader.class.getResourceAsStream(resourcePath)) {
+        String indexPath = "/data/minemons/cards/cards.json";
+        try (InputStream stream = CardDataLoader.class.getResourceAsStream(indexPath)) {
             if (stream == null) {
-                LOGGER.error("Missing built-in card data at {}", resourcePath);
+                LOGGER.error("Missing built-in card index at {}", indexPath);
                 return;
             }
 
             try (Reader reader = new InputStreamReader(stream, StandardCharsets.UTF_8)) {
-                JsonArray cardsArray = JsonParser.parseReader(reader).getAsJsonArray();
-                int loaded = loadCardsArray(cardsArray, "built-in card data");
-                LOGGER.info("Loaded {} built-in card definitions from {}", loaded, resourcePath);
+                JsonArray cardFiles = JsonParser.parseReader(reader).getAsJsonObject().getAsJsonArray("cards");
+                int loaded = 0;
+                for (int i = 0; i < cardFiles.size(); i++) {
+                    String cardPath = "/data/minemons/cards/" + cardFiles.get(i).getAsString();
+                    loaded += loadBuiltinCard(cardPath);
+                }
+                LOGGER.info("Loaded {} built-in card definitions from {} card files", loaded, cardFiles.size());
             }
         } catch (IOException | RuntimeException e) {
             LOGGER.error("Error loading built-in card definitions", e);
+        }
+    }
+
+    private static int loadBuiltinCard(String cardPath) {
+        try (InputStream stream = CardDataLoader.class.getResourceAsStream(cardPath)) {
+            if (stream == null) {
+                LOGGER.warn("Missing built-in card definition at {}", cardPath);
+                return 0;
+            }
+            try (Reader reader = new InputStreamReader(stream, StandardCharsets.UTF_8)) {
+                JsonObject cardJson = JsonParser.parseReader(reader).getAsJsonObject();
+                Card card = loadCardFromJson(cardJson);
+                CardRegistry.registerCard(card);
+                return 1;
+            }
+        } catch (IOException | RuntimeException | InvalidCardDefinitionException e) {
+            LOGGER.warn("Failed to load built-in card definition from {}", cardPath, e);
+            return 0;
         }
     }
 

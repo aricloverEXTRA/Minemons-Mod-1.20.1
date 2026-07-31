@@ -1,0 +1,19 @@
+{
+  "id": "bench_heal",
+  "displayName": "Bench Medic",
+  "type": "TRAINER",
+  "element": "NEXA",
+  "rarity": "UNCOMMON",
+  "description": "Heal all benched Minemons by 15 HP.",
+  "art": {
+    "path": "villager/cleric_villager.png",
+    "type": "entity"
+  },
+  "effect": "HEAL_BENCH",
+  "value": 15,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

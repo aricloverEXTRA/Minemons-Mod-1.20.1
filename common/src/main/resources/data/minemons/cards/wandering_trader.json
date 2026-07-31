@@ -1,0 +1,23 @@
+{
+  "id": "wandering_trader",
+  "displayName": "Wandering Trader",
+  "type": "MINEMON",
+  "element": "NEXA",
+  "rarity": "RARE",
+  "description": "He appears without warning and leaves just as fast \u2014 but always with a deal.",
+  "art": {
+    "path": "villager/wandering_trader.png",
+    "type": "entity"
+  },
+  "maxHp": 43,
+  "baseAttack": 11,
+  "passiveAbility": "Haggle",
+  "passiveDescription": "Swap any card in your hand with a random card from your deck.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

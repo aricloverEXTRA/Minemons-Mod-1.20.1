@@ -1,0 +1,23 @@
+{
+  "id": "pufferfish",
+  "displayName": "Pufferfish",
+  "type": "MINEMON",
+  "element": "AQUA",
+  "rarity": "COMMON",
+  "description": "Looks harmless \u2014 touching it is the last mistake many Minemons make.",
+  "art": {
+    "path": "fish/pufferfish.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 8,
+  "passiveAbility": "Inflate",
+  "passiveDescription": "When hit, poisons attacker for 3 turns.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

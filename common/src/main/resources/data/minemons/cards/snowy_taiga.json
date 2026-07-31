@@ -1,0 +1,20 @@
+{
+  "id": "snowy_taiga",
+  "displayName": "Snowy Taiga",
+  "type": "PLACE",
+  "element": "AQUA",
+  "rarity": "UNCOMMON",
+  "description": "Electra card effects are 50% less effective (frozen circuits).",
+  "art": {
+    "path": "entity/snow_golem/snow_golem.png",
+    "type": "entity"
+  },
+  "effect": "WEAKEN_ELEMENT",
+  "affectedElement": "ELECTRA",
+  "value": 0,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

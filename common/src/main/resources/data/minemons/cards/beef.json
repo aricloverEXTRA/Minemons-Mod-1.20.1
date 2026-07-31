@@ -1,0 +1,20 @@
+{
+  "id": "beef",
+  "displayName": "Beef",
+  "type": "CONSUMABLE",
+  "element": "NEXA",
+  "rarity": "COMMON",
+  "description": "Increase active Minemon's max HP by 20 for 3 turns.",
+  "art": {
+    "path": "items/cooked_beef.png",
+    "type": "item"
+  },
+  "effect": "HP_BOOST",
+  "value": 20,
+  "duration": 3,
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

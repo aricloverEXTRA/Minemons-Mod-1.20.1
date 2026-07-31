@@ -1,0 +1,20 @@
+{
+  "id": "totem_of_undying",
+  "displayName": "Totem of Undying",
+  "type": "CONSUMABLE",
+  "element": "LUXA",
+  "rarity": "MYTHIC",
+  "description": "Prevents your active Minemon from fainting once by granting an 80-damage emergency shield. Legendary.",
+  "art": {
+    "path": "items/totem_of_undying.png",
+    "type": "item"
+  },
+  "effect": "SHIELD",
+  "value": 80,
+  "duration": 1,
+  "visualRarity": {
+    "frame": "mythic",
+    "shine": true,
+    "shinyVariant": true
+  }
+}

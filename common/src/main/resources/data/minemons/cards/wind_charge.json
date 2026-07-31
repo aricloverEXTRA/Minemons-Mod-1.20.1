@@ -1,0 +1,23 @@
+{
+  "id": "wind_charge",
+  "displayName": "Wind Charge",
+  "type": "MINEMON",
+  "element": "ATMOSA",
+  "rarity": "UNCOMMON",
+  "description": "A concentrated burst of air that hits hard and disrupts positioning.",
+  "art": {
+    "path": "breeze/breeze.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 14,
+  "passiveAbility": "Explosive Gust",
+  "passiveDescription": "Deals full damage then knocks opponent to bench (forced swap).",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

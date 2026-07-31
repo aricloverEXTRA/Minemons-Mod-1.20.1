@@ -1,0 +1,20 @@
+{
+  "id": "mushroom_fields",
+  "displayName": "Mushroom Fields",
+  "type": "PLACE",
+  "element": "FLORA",
+  "rarity": "UNCOMMON",
+  "description": "Both active Minemons take 2 chip damage per turn (confusion spores).",
+  "art": {
+    "path": "entity/cow/mooshroom.png",
+    "type": "entity"
+  },
+  "effect": "CHIP_DAMAGE_BOTH",
+  "affectedElement": null,
+  "value": 2,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

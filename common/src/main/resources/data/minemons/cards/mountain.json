@@ -1,0 +1,20 @@
+{
+  "id": "mountain",
+  "displayName": "Mountain",
+  "type": "PLACE",
+  "element": "TERRA",
+  "rarity": "COMMON",
+  "description": "Terra cards gain +2 ATK.",
+  "art": {
+    "path": "entity/goat/goat.png",
+    "type": "entity"
+  },
+  "effect": "BOOST_ELEMENT",
+  "affectedElement": "TERRA",
+  "value": 2,
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

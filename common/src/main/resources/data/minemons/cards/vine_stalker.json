@@ -1,0 +1,23 @@
+{
+  "id": "vine_stalker",
+  "displayName": "Vine Stalker",
+  "type": "MINEMON",
+  "element": "FLORA",
+  "rarity": "UNCOMMON",
+  "description": "Its vines coil around the active Minemon, locking it in place.",
+  "art": {
+    "path": "creeper/creeper.png",
+    "type": "entity"
+  },
+  "maxHp": 47,
+  "baseAttack": 13,
+  "passiveAbility": "Bind",
+  "passiveDescription": "Prevents opponent from swapping out on their next turn.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

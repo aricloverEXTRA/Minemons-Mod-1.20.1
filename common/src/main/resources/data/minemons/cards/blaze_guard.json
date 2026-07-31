@@ -1,0 +1,23 @@
+{
+  "id": "blaze_guard",
+  "displayName": "Blaze Guard",
+  "type": "MINEMON",
+  "element": "LUXA",
+  "rarity": "RARE",
+  "description": "Blessed fire that burns especially bright against void-type opponents.",
+  "art": {
+    "path": "blaze/blaze.png",
+    "type": "entity"
+  },
+  "maxHp": 58,
+  "baseAttack": 15,
+  "passiveAbility": "Holy Flame",
+  "passiveDescription": "Deals +5 damage to COSMA-type Minemons.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

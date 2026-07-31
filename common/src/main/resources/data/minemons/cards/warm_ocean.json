@@ -1,0 +1,20 @@
+{
+  "id": "warm_ocean",
+  "displayName": "Warm Ocean",
+  "type": "PLACE",
+  "element": "AQUA",
+  "rarity": "UNCOMMON",
+  "description": "Healing consumables are 50% more effective.",
+  "art": {
+    "path": "entity/dolphin/dolphin.png",
+    "type": "entity"
+  },
+  "effect": "BOOST_HEAL",
+  "affectedElement": null,
+  "value": 0,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

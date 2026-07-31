@@ -1,0 +1,20 @@
+{
+  "id": "soul_sand_valley",
+  "displayName": "Soul Sand Valley",
+  "type": "PLACE",
+  "element": "COSMA",
+  "rarity": "RARE",
+  "description": "Swapping any card costs 1 extra action.",
+  "art": {
+    "path": "entity/bat/bat.png",
+    "type": "entity"
+  },
+  "effect": "SWAP_COST",
+  "affectedElement": null,
+  "value": 1,
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

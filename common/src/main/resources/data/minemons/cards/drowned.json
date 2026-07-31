@@ -1,0 +1,23 @@
+{
+  "id": "drowned",
+  "displayName": "Drowned",
+  "type": "MINEMON",
+  "element": "AQUA",
+  "rarity": "UNCOMMON",
+  "description": "It pulls enemies beneath the surface, sapping their fighting strength.",
+  "art": {
+    "path": "drowned/drowned.png",
+    "type": "entity"
+  },
+  "maxHp": 48,
+  "baseAttack": 13,
+  "passiveAbility": "Submerge",
+  "passiveDescription": "Applies 'submerged' debuff to one opposing card, lowering its ATK by 3.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "honey_bottle",
+  "displayName": "Honey Bottle",
+  "type": "CONSUMABLE",
+  "element": "FLORA",
+  "rarity": "UNCOMMON",
+  "description": "Heals 12 HP and removes one active debuff from your Minemon.",
+  "art": {
+    "path": "items/honey_bottle.png",
+    "type": "item"
+  },
+  "effect": "HEAL",
+  "value": 12,
+  "duration": 0,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

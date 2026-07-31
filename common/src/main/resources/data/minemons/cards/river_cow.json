@@ -1,0 +1,23 @@
+{
+  "id": "river_cow",
+  "displayName": "River Cow",
+  "type": "MINEMON",
+  "element": "AQUA",
+  "rarity": "UNCOMMON",
+  "description": "Wades through rivers and heals its allies with the soothing current it stirs.",
+  "art": {
+    "path": "cow/cow.png",
+    "type": "entity"
+  },
+  "maxHp": 55,
+  "baseAttack": 9,
+  "passiveAbility": "Healing Current",
+  "passiveDescription": "Heals entire bench by 1 HP each turn.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "endermite_scout",
+  "displayName": "Endermite Scout",
+  "type": "MINEMON",
+  "element": "COSMA",
+  "rarity": "UNCOMMON",
+  "description": "A void-touched creature that glimpses through the fabric of secrecy.",
+  "art": {
+    "path": "endermite/endermite.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 10,
+  "passiveAbility": "Hand Peek",
+  "passiveDescription": "On summon, reveal 1 random card from opponent's hand.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

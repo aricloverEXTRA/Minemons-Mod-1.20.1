@@ -1,0 +1,20 @@
+{
+  "id": "lush_caves",
+  "displayName": "Lush Caves",
+  "type": "PLACE",
+  "element": "FLORA",
+  "rarity": "UNCOMMON",
+  "description": "All Consumable card healing is boosted by +1 HP.",
+  "art": {
+    "path": "entity/axolotl/axolotl.png",
+    "type": "entity"
+  },
+  "effect": "BOOST_HEAL",
+  "affectedElement": null,
+  "value": 1,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

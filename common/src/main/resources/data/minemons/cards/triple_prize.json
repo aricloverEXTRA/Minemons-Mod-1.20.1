@@ -1,0 +1,19 @@
+{
+  "id": "triple_prize",
+  "displayName": "Triple Prize",
+  "type": "TRAINER",
+  "element": "NEXA",
+  "rarity": "MYTHIC",
+  "description": "Take 3 prize cards on your next KO. Mythic rarity.",
+  "art": {
+    "path": "illager/pillager.png",
+    "type": "entity"
+  },
+  "effect": "TAKE_EXTRA_PRIZE",
+  "value": 3,
+  "visualRarity": {
+    "frame": "mythic",
+    "shine": true,
+    "shinyVariant": true
+  }
+}

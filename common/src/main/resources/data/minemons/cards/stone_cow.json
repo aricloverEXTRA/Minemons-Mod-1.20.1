@@ -1,0 +1,23 @@
+{
+  "id": "stone_cow",
+  "displayName": "Stone Cow",
+  "type": "MINEMON",
+  "element": "TERRA",
+  "rarity": "UNCOMMON",
+  "description": "Its mineral-encrusted hide is nearly impenetrable on the first strike.",
+  "art": {
+    "path": "cow/cow.png",
+    "type": "entity"
+  },
+  "maxHp": 62,
+  "baseAttack": 11,
+  "passiveAbility": "Armoured Hide",
+  "passiveDescription": "Blocks first attack each match completely.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

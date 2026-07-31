@@ -1,0 +1,23 @@
+{
+  "id": "ocelot",
+  "displayName": "Ocelot",
+  "type": "MINEMON",
+  "element": "NEXA",
+  "rarity": "UNCOMMON",
+  "description": "Its natural predator aura terrifies ghost-type Minemons.",
+  "art": {
+    "path": "ocelot/ocelot.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 13,
+  "passiveAbility": "Phantom Fear",
+  "passiveDescription": "Phantom-line Minemons cannot target this card.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

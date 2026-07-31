@@ -1,0 +1,23 @@
+{
+  "id": "fire_chicken",
+  "displayName": "Fire Chicken",
+  "type": "MINEMON",
+  "element": "EMBERA",
+  "rarity": "COMMON",
+  "description": "Chaotically helpful. Its panicked flapping sends sparks in every direction.",
+  "art": {
+    "path": "chicken/chicken.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 10,
+  "passiveAbility": "Panic Flap",
+  "passiveDescription": "On summon, randomly buffs one allied Minemon's attack by 4.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

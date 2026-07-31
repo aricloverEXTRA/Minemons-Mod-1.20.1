@@ -1,0 +1,20 @@
+{
+  "id": "jungle",
+  "displayName": "Jungle",
+  "type": "PLACE",
+  "element": "FLORA",
+  "rarity": "UNCOMMON",
+  "description": "Both players draw 1 extra card on their first turn.",
+  "art": {
+    "path": "entity/ocelot/ocelot.png",
+    "type": "entity"
+  },
+  "effect": "EXTRA_DRAW",
+  "affectedElement": null,
+  "value": 1,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

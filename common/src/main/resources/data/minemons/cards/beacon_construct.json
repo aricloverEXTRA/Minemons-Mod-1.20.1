@@ -1,0 +1,23 @@
+{
+  "id": "beacon_construct",
+  "displayName": "Beacon Construct",
+  "type": "MINEMON",
+  "element": "LUXA",
+  "rarity": "EPIC",
+  "description": "A manifestation of beacon light. Its aura fortifies every ally.",
+  "art": {
+    "path": "iron_golem/iron_golem.png",
+    "type": "entity"
+  },
+  "maxHp": 71,
+  "baseAttack": 16,
+  "passiveAbility": "Buff All",
+  "passiveDescription": "Gives all allied elements +1 elemental resistance for 1 turn.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "epic",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

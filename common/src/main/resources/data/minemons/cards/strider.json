@@ -1,0 +1,23 @@
+{
+  "id": "strider",
+  "displayName": "Strider",
+  "type": "MINEMON",
+  "element": "EMBERA",
+  "rarity": "UNCOMMON",
+  "description": "It strides across molten terrain that would melt anything else.",
+  "art": {
+    "path": "strider/strider.png",
+    "type": "entity"
+  },
+  "maxHp": 48,
+  "baseAttack": 14,
+  "passiveAbility": "Lava Walk",
+  "passiveDescription": "Takes no damage from Embera Place cards. Gains +3 ATK on lava fields.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

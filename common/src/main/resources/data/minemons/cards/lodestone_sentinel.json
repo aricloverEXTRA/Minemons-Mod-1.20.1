@@ -1,0 +1,23 @@
+{
+  "id": "lodestone_sentinel",
+  "displayName": "Lodestone Sentinel",
+  "type": "MINEMON",
+  "element": "ELECTRA",
+  "rarity": "RARE",
+  "description": "It magnetises the battlefield, dragging hidden threats into the open.",
+  "art": {
+    "path": "iron_golem/iron_golem.png",
+    "type": "entity"
+  },
+  "maxHp": 66,
+  "baseAttack": 15,
+  "passiveAbility": "Magnetic Pull",
+  "passiveDescription": "Pulls one benched opponent card into active position.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

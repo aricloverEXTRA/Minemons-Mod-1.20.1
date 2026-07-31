@@ -1,0 +1,20 @@
+{
+  "id": "cooked_chicken",
+  "displayName": "Cooked Chicken",
+  "type": "CONSUMABLE",
+  "element": "NEXA",
+  "rarity": "COMMON",
+  "description": "Restore 10 HP. A favourite of speedy Atmosa-type trainers.",
+  "art": {
+    "path": "items/cooked_chicken.png",
+    "type": "item"
+  },
+  "effect": "HEAL",
+  "value": 10,
+  "duration": 0,
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

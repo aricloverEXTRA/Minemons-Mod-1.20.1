@@ -1,0 +1,23 @@
+{
+  "id": "ghastling",
+  "displayName": "Ghastling",
+  "type": "MINEMON",
+  "element": "EMBERA",
+  "rarity": "RARE",
+  "description": "A tiny ghast that packs a disproportionate punch at the cost of its own health.",
+  "art": {
+    "path": "ghast/ghast.png",
+    "type": "entity"
+  },
+  "maxHp": 56,
+  "baseAttack": 18,
+  "passiveAbility": "Fireball Recoil",
+  "passiveDescription": "Fires a powerful ranged blast but deals 5 recoil to itself.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

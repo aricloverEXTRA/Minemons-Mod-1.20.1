@@ -1,0 +1,20 @@
+{
+  "id": "stronghold",
+  "displayName": "Stronghold",
+  "type": "PLACE",
+  "element": "TERRA",
+  "rarity": "RARE",
+  "description": "Both players reveal their top deck card each turn.",
+  "art": {
+    "path": "entity/iron_golem/iron_golem.png",
+    "type": "entity"
+  },
+  "effect": "REVEAL_TOP_CARD",
+  "affectedElement": null,
+  "value": 0,
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

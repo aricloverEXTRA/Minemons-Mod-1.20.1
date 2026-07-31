@@ -1,0 +1,23 @@
+{
+  "id": "geode_crab",
+  "displayName": "Geode Crab",
+  "type": "MINEMON",
+  "element": "CRYSTRA",
+  "rarity": "RARE",
+  "description": "Its shell gets thicker with time. The longer it waits, the harder it is to crack.",
+  "art": {
+    "path": "guardian/guardian.png",
+    "type": "entity"
+  },
+  "maxHp": 70,
+  "baseAttack": 13,
+  "passiveAbility": "Harden",
+  "passiveDescription": "Gains +2 defense each turn it remains active.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

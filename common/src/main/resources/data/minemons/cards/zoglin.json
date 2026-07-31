@@ -1,0 +1,23 @@
+{
+  "id": "zoglin",
+  "displayName": "Zoglin",
+  "type": "MINEMON",
+  "element": "EMBERA",
+  "rarity": "UNCOMMON",
+  "description": "A hoglin warped by the Nether's darkness. Fear itself cannot slow it.",
+  "art": {
+    "path": "hoglin/zoglin.png",
+    "type": "entity"
+  },
+  "maxHp": 57,
+  "baseAttack": 16,
+  "passiveAbility": "Undead Fury",
+  "passiveDescription": "Immune to COSMA debuffs.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

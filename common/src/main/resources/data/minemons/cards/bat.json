@@ -1,0 +1,23 @@
+{
+  "id": "bat",
+  "displayName": "Bat",
+  "type": "MINEMON",
+  "element": "COSMA",
+  "rarity": "UNCOMMON",
+  "description": "It vanishes into the dark before the final blow lands.",
+  "art": {
+    "path": "bat/bat.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 10,
+  "passiveAbility": "Flee",
+  "passiveDescription": "Retreats to hand instead of fainting when HP drops below 10 (once per match).",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

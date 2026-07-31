@@ -1,0 +1,23 @@
+{
+  "id": "witch",
+  "displayName": "Witch",
+  "type": "MINEMON",
+  "element": "FLORA",
+  "rarity": "UNCOMMON",
+  "description": "Her potions are unpredictable but always consequential.",
+  "art": {
+    "path": "witch/witch.png",
+    "type": "entity"
+  },
+  "maxHp": 45,
+  "baseAttack": 12,
+  "passiveAbility": "Potion Toss",
+  "passiveDescription": "Randomly applies Heal, Debuff, or Slow to a target.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

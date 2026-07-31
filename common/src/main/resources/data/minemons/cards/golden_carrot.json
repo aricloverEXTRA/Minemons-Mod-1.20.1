@@ -1,0 +1,20 @@
+{
+  "id": "golden_carrot",
+  "displayName": "Golden Carrot",
+  "type": "CONSUMABLE",
+  "element": "LUXA",
+  "rarity": "UNCOMMON",
+  "description": "Boosts attack by 5 for 2 turns. Sharper vision, sharper strikes.",
+  "art": {
+    "path": "items/golden_carrot.png",
+    "type": "item"
+  },
+  "effect": "ATTACK_BOOST",
+  "value": 5,
+  "duration": 2,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

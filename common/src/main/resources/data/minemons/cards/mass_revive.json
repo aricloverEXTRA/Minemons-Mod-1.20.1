@@ -1,0 +1,19 @@
+{
+  "id": "mass_revive",
+  "displayName": "Mass Revive",
+  "type": "TRAINER",
+  "element": "NEXA",
+  "rarity": "MYTHIC",
+  "description": "Revive all fainted Minemons to bench with 50% HP.",
+  "art": {
+    "path": "villager/cleric_villager.png",
+    "type": "entity"
+  },
+  "effect": "REVIVE_MINEMON",
+  "value": 50,
+  "visualRarity": {
+    "frame": "mythic",
+    "shine": true,
+    "shinyVariant": true
+  }
+}

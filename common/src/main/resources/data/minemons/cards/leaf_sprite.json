@@ -1,0 +1,23 @@
+{
+  "id": "leaf_sprite",
+  "displayName": "Leaf Sprite",
+  "type": "MINEMON",
+  "element": "FLORA",
+  "rarity": "UNCOMMON",
+  "description": "A forest spirit that arrives glowing with vitality and natural energy.",
+  "art": {
+    "path": "allay/allay.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 11,
+  "passiveAbility": "Bloom Heal",
+  "passiveDescription": "Heals 8 HP to self on summon.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

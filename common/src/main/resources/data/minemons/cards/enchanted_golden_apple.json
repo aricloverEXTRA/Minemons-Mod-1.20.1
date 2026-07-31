@@ -1,0 +1,20 @@
+{
+  "id": "enchanted_golden_apple",
+  "displayName": "Enchanted Golden Apple",
+  "type": "CONSUMABLE",
+  "element": "LUXA",
+  "rarity": "RARE",
+  "description": "Grant a 40-damage shield for 3 turns. The legends are true.",
+  "art": {
+    "path": "items/enchanted_golden_apple.png",
+    "type": "item"
+  },
+  "effect": "SHIELD",
+  "value": 32,
+  "duration": 3,
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

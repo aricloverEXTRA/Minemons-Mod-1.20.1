@@ -1,0 +1,20 @@
+{
+  "id": "deep_dark",
+  "displayName": "Deep Dark",
+  "type": "PLACE",
+  "element": "COSMA",
+  "rarity": "RARE",
+  "description": "Loud attacks risk summoning a hazard token. Passives are suppressed.",
+  "art": {
+    "path": "entity/warden/warden.png",
+    "type": "entity"
+  },
+  "effect": "DISABLE_PASSIVES",
+  "affectedElement": null,
+  "value": 0,
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "warped_forest",
+  "displayName": "Warped Forest",
+  "type": "PLACE",
+  "element": "COSMA",
+  "rarity": "EPIC",
+  "description": "All Trainer card effects are doubled while this Place is active.",
+  "art": {
+    "path": "entity/enderman/enderman.png",
+    "type": "entity"
+  },
+  "effect": "DOUBLE_TRAINER",
+  "affectedElement": null,
+  "value": 0,
+  "visualRarity": {
+    "frame": "epic",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

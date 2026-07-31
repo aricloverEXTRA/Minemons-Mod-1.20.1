@@ -1,0 +1,20 @@
+{
+  "id": "badlands",
+  "displayName": "Badlands",
+  "type": "PLACE",
+  "element": "TERRA",
+  "rarity": "UNCOMMON",
+  "description": "Terra and Crystra cards gain +1 ATK.",
+  "art": {
+    "path": "entity/goat/goat.png",
+    "type": "entity"
+  },
+  "effect": "BOOST_ELEMENT",
+  "affectedElement": "TERRA",
+  "value": 1,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

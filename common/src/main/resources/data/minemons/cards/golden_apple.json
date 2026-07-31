@@ -1,0 +1,20 @@
+{
+  "id": "golden_apple",
+  "displayName": "Golden Apple",
+  "type": "CONSUMABLE",
+  "element": "LUXA",
+  "rarity": "UNCOMMON",
+  "description": "Grant active Minemon a shield that absorbs up to 20 damage for 2 turns.",
+  "art": {
+    "path": "items/golden_apple.png",
+    "type": "item"
+  },
+  "effect": "SHIELD",
+  "value": 20,
+  "duration": 2,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

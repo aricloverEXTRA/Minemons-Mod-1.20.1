@@ -1,0 +1,23 @@
+{
+  "id": "chicken",
+  "displayName": "Chicken",
+  "type": "MINEMON",
+  "element": "ATMOSA",
+  "rarity": "COMMON",
+  "description": "Quick and nimble, this feathery Minemon sidesteps incoming blows once.",
+  "art": {
+    "path": "chicken/chicken.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 9,
+  "passiveAbility": "Flutter Dodge",
+  "passiveDescription": "Dodges the very first attack each match.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

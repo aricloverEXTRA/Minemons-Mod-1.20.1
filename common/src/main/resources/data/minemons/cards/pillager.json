@@ -1,0 +1,23 @@
+{
+  "id": "pillager",
+  "displayName": "Pillager",
+  "type": "MINEMON",
+  "element": "TERRA",
+  "rarity": "UNCOMMON",
+  "description": "Its banner marks territory. When it falls, it leaves your deck richer.",
+  "art": {
+    "path": "illager/pillager.png",
+    "type": "entity"
+  },
+  "maxHp": 48,
+  "baseAttack": 13,
+  "passiveAbility": "Raid Captain",
+  "passiveDescription": "On KO, draws 1 extra card for its side.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

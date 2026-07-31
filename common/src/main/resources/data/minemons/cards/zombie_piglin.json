@@ -1,0 +1,23 @@
+{
+  "id": "zombie_piglin",
+  "displayName": "Zombie Piglin",
+  "type": "MINEMON",
+  "element": "COSMA",
+  "rarity": "UNCOMMON",
+  "description": "Mostly peaceful \u2014 until you provoke it. Then it retaliates with everything it has.",
+  "art": {
+    "path": "pig/zombified_piglin.png",
+    "type": "entity"
+  },
+  "maxHp": 53,
+  "baseAttack": 14,
+  "passiveAbility": "Grudge",
+  "passiveDescription": "If attacked first, retaliates with double damage once per match.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

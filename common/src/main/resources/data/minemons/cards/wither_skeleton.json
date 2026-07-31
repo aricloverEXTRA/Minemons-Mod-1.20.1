@@ -1,0 +1,23 @@
+{
+  "id": "wither_skeleton",
+  "displayName": "Wither Skeleton",
+  "type": "MINEMON",
+  "element": "ATMOSA",
+  "rarity": "RARE",
+  "description": "Its arrows carry the rot of the Nether. The wound keeps hurting long after.",
+  "art": {
+    "path": "skeleton/wither_skeleton.png",
+    "type": "entity"
+  },
+  "maxHp": 59,
+  "baseAttack": 17,
+  "passiveAbility": "Wither Arrow",
+  "passiveDescription": "Applies Wither status \u2014 3 damage per turn for 3 turns.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

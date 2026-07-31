@@ -1,0 +1,23 @@
+{
+  "id": "amethyst_golem",
+  "displayName": "Amethyst Golem",
+  "type": "MINEMON",
+  "element": "CRYSTRA",
+  "rarity": "EPIC",
+  "description": "A golem born of amethyst. Every blow fractures and rebounds.",
+  "art": {
+    "path": "iron_golem/iron_golem.png",
+    "type": "entity"
+  },
+  "maxHp": 85,
+  "baseAttack": 17,
+  "passiveAbility": "Crystal Reflect",
+  "passiveDescription": "Reflects 25% of damage taken back at attacker.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "epic",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

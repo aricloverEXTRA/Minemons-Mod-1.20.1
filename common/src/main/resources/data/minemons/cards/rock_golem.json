@@ -1,0 +1,23 @@
+{
+  "id": "rock_golem",
+  "displayName": "Rock Golem",
+  "type": "MINEMON",
+  "element": "TERRA",
+  "rarity": "RARE",
+  "description": "A stone colossus that stands between its allies and all harm.",
+  "art": {
+    "path": "iron_golem/iron_golem.png",
+    "type": "entity"
+  },
+  "maxHp": 84,
+  "baseAttack": 15,
+  "passiveAbility": "Taunt",
+  "passiveDescription": "Forces opponents to target this card instead of others.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

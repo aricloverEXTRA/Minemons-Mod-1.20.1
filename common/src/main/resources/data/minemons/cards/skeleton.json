@@ -1,0 +1,23 @@
+{
+  "id": "skeleton",
+  "displayName": "Skeleton",
+  "type": "MINEMON",
+  "element": "ATMOSA",
+  "rarity": "COMMON",
+  "description": "A classic long-range attacker. It hits without putting itself at risk.",
+  "art": {
+    "path": "skeleton/skeleton.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 11,
+  "passiveAbility": "Ranged Shot",
+  "passiveDescription": "Can attack without being adjacent \u2014 ignores contact effects.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

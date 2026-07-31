@@ -1,0 +1,20 @@
+{
+  "id": "mushroom_stew",
+  "displayName": "Mushroom Stew",
+  "type": "CONSUMABLE",
+  "element": "FLORA",
+  "rarity": "UNCOMMON",
+  "description": "Heals 10 HP and boosts max HP by 10 for 2 turns.",
+  "art": {
+    "path": "items/mushroom_stew.png",
+    "type": "item"
+  },
+  "effect": "HP_BOOST",
+  "value": 10,
+  "duration": 2,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

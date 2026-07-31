@@ -1,0 +1,19 @@
+{
+  "id": "quick_draw",
+  "displayName": "Quick Draw",
+  "type": "TRAINER",
+  "element": "NEXA",
+  "rarity": "COMMON",
+  "description": "Draw 2 cards immediately.",
+  "art": {
+    "path": "villager/villager.png",
+    "type": "entity"
+  },
+  "effect": "DRAW_CARDS",
+  "value": 2,
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

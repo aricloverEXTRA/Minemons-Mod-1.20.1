@@ -1,0 +1,23 @@
+{
+  "id": "crystal_spider",
+  "displayName": "Crystal Spider",
+  "type": "MINEMON",
+  "element": "CRYSTRA",
+  "rarity": "UNCOMMON",
+  "description": "Its crystalline web bends light and shatters opponent offensive combos.",
+  "art": {
+    "path": "spider/spider.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 13,
+  "passiveAbility": "Prism Web",
+  "passiveDescription": "Reduces opponent's attack by 3 for 2 turns on hit.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

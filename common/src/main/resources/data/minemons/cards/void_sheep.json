@@ -1,0 +1,23 @@
+{
+  "id": "void_sheep",
+  "displayName": "Void Sheep",
+  "type": "MINEMON",
+  "element": "COSMA",
+  "rarity": "RARE",
+  "description": "A sheep touched by the void. It phases through danger with eerie calm.",
+  "art": {
+    "path": "sheep/sheep.png",
+    "type": "entity"
+  },
+  "maxHp": 52,
+  "baseAttack": 15,
+  "passiveAbility": "Void Step",
+  "passiveDescription": "Teleports out of danger once per match \u2014 avoids one attack.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

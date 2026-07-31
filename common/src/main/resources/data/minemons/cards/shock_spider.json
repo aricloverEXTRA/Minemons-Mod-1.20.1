@@ -1,0 +1,23 @@
+{
+  "id": "shock_spider",
+  "displayName": "Shock Spider",
+  "type": "MINEMON",
+  "element": "ELECTRA",
+  "rarity": "UNCOMMON",
+  "description": "Its electric web clings and saps the fighting power of trapped prey.",
+  "art": {
+    "path": "spider/spider.png",
+    "type": "entity"
+  },
+  "maxHp": 41,
+  "baseAttack": 13,
+  "passiveAbility": "Web Trap",
+  "passiveDescription": "Lowers opponent active Minemon's attack by 4 for 2 turns.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

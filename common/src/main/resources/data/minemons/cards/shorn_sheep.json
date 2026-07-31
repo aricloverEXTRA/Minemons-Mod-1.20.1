@@ -1,0 +1,23 @@
+{
+  "id": "shorn_sheep",
+  "displayName": "Shorn Sheep",
+  "type": "MINEMON",
+  "element": "NEXA",
+  "rarity": "COMMON",
+  "description": "After being sheared it's faster and leaner. Evolves from Sheep after 2 turns.",
+  "art": {
+    "path": "sheep/sheep.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 13,
+  "passiveAbility": "Speed Shear",
+  "passiveDescription": "Attack speed +1 extra action per match after evolving.",
+  "neutralEnergy": true,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

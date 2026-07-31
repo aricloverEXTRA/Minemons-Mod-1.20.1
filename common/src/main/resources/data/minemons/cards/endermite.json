@@ -1,0 +1,23 @@
+{
+  "id": "endermite",
+  "displayName": "Endermite",
+  "type": "MINEMON",
+  "element": "TERRA",
+  "rarity": "COMMON",
+  "description": "It burrows beneath terrain obstacles, nullifying environmental hazards.",
+  "art": {
+    "path": "endermite/endermite.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 8,
+  "passiveAbility": "Tunnel Through",
+  "passiveDescription": "Ignores Place terrain penalties.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

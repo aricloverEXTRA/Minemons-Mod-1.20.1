@@ -1,0 +1,23 @@
+{
+  "id": "enderman",
+  "displayName": "Enderman",
+  "type": "MINEMON",
+  "element": "COSMA",
+  "rarity": "UNCOMMON",
+  "description": "Never stays where you expect it. Field control incarnate.",
+  "art": {
+    "path": "enderman/enderman.png",
+    "type": "entity"
+  },
+  "maxHp": 51,
+  "baseAttack": 13,
+  "passiveAbility": "Teleport",
+  "passiveDescription": "Can swap itself with any benched Minemon freely once per turn.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "salmon",
+  "displayName": "Salmon",
+  "type": "MINEMON",
+  "element": "AQUA",
+  "rarity": "COMMON",
+  "description": "Born to fight against the current. Earth-dwellers can't catch it.",
+  "art": {
+    "path": "fish/salmon.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 8,
+  "passiveAbility": "Upstream Rush",
+  "passiveDescription": "Deals +2 damage to Terra-type Minemons.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

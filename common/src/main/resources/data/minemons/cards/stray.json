@@ -1,0 +1,23 @@
+{
+  "id": "stray",
+  "displayName": "Stray",
+  "type": "MINEMON",
+  "element": "ATMOSA",
+  "rarity": "UNCOMMON",
+  "description": "A frozen skeleton from the tundra. Its arrows carry chilling slowness.",
+  "art": {
+    "path": "skeleton/stray.png",
+    "type": "entity"
+  },
+  "maxHp": 41,
+  "baseAttack": 13,
+  "passiveAbility": "Slowness Arrow",
+  "passiveDescription": "Reduces opponent speed \u2014 they lose one bonus action for 2 turns.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "slime",
+  "displayName": "Slime",
+  "type": "MINEMON",
+  "element": "FLORA",
+  "rarity": "COMMON",
+  "description": "Bouncy and resilient. Hitting it just makes attackers sluggish.",
+  "art": {
+    "path": "slime/slime.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 9,
+  "passiveAbility": "Sticky Body",
+  "passiveDescription": "Slows any Minemon that attacks it (-1 action next turn).",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

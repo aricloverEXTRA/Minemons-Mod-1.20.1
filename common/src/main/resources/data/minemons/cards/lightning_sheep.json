@@ -1,0 +1,23 @@
+{
+  "id": "lightning_sheep",
+  "displayName": "Lightning Sheep",
+  "type": "MINEMON",
+  "element": "ELECTRA",
+  "rarity": "RARE",
+  "description": "A sheep that got struck by lightning and loved it. Shocks anything it touches.",
+  "art": {
+    "path": "sheep/sheep.png",
+    "type": "entity"
+  },
+  "maxHp": 53,
+  "baseAttack": 16,
+  "passiveAbility": "Static Shock",
+  "passiveDescription": "15% chance to skip opponent's next action on attack.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "rare",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "potion_invis",
+  "displayName": "Invisibility Potion",
+  "type": "CONSUMABLE",
+  "element": "COSMA",
+  "rarity": "UNCOMMON",
+  "description": "Active card skips opponent's next targeting action.",
+  "art": {
+    "path": "items/potion_bottle_empty.png",
+    "type": "item"
+  },
+  "effect": "FLEE",
+  "value": 1,
+  "duration": 1,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

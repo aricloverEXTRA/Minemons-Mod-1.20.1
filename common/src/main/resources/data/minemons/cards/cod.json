@@ -1,0 +1,23 @@
+{
+  "id": "cod",
+  "displayName": "Cod",
+  "type": "MINEMON",
+  "element": "AQUA",
+  "rarity": "COMMON",
+  "description": "Alone it's tiny. With an aqua team behind it, its strikes add up fast.",
+  "art": {
+    "path": "fish/cod.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 8,
+  "passiveAbility": "School",
+  "passiveDescription": "Deals +1 damage per Aqua card on your bench.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "double_prize",
+  "displayName": "Double Down",
+  "type": "TRAINER",
+  "element": "NEXA",
+  "rarity": "EPIC",
+  "description": "Take 2 prize cards on your next Minemon KO.",
+  "art": {
+    "path": "villager/villager.png",
+    "type": "entity"
+  },
+  "effect": "TAKE_EXTRA_PRIZE",
+  "value": 2,
+  "visualRarity": {
+    "frame": "epic",
+    "shine": true,
+    "shinyVariant": false
+  }
+}

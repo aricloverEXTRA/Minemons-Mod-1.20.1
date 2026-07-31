@@ -1,0 +1,19 @@
+{
+  "id": "librarian_lore",
+  "displayName": "Librarian's Lore",
+  "type": "TRAINER",
+  "element": "NEXA",
+  "rarity": "UNCOMMON",
+  "description": "Look at the top 3 cards of your deck without drawing.",
+  "art": {
+    "path": "villager/librarian_villager.png",
+    "type": "entity"
+  },
+  "effect": "PEEK_DECK",
+  "value": 3,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

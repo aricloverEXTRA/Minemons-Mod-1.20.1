@@ -1,0 +1,23 @@
+{
+  "id": "camel",
+  "displayName": "Camel",
+  "type": "MINEMON",
+  "element": "TERRA",
+  "rarity": "UNCOMMON",
+  "description": "Built for the long game. It carries its team through harsh conditions.",
+  "art": {
+    "path": "camel/camel.png",
+    "type": "entity"
+  },
+  "maxHp": 60,
+  "baseAttack": 11,
+  "passiveAbility": "Desert Endurance",
+  "passiveDescription": "Takes 10% less damage from EMBERA in arid Place cards.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

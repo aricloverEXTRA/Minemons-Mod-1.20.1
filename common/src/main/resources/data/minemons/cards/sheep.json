@@ -1,0 +1,23 @@
+{
+  "id": "sheep",
+  "displayName": "Sheep",
+  "type": "MINEMON",
+  "element": "NEXA",
+  "rarity": "COMMON",
+  "description": "A fluffy Minemon that can use any energy. Its dense wool absorbs fire.",
+  "art": {
+    "path": "sheep/sheep.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 10,
+  "passiveAbility": "Wool Padding",
+  "passiveDescription": "Reduces incoming Embera damage by 20% (wool fire resistance).",
+  "neutralEnergy": true,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

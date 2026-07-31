@@ -81,6 +81,9 @@ public class CardRenderer {
         if (rarityConfig.hasGlow && !selected) {
             drawGlowEffect(ctx, x, y, w, h, rarityConfig.borderPrimary, rarityConfig.getGlowRadius());
         }
+        if (rarityConfig.hasParticles) {
+            drawRarityShimmer(ctx, x, y, w, h, rarityConfig);
+        }
 
         if (card == null) {
             ctx.drawCenteredTextWithShadow(tr, "§7Empty", x + w / 2, y + h / 2 - 4, TEXT_GRAY);
@@ -389,6 +392,22 @@ public class CardRenderer {
             int alpha = (int)(0x0A * ((float)i / radius));
             int glowCol = (color & 0x00FFFFFF) | ((alpha << 24) & 0xFF000000);
             drawRoundedBorder(ctx, x - i, y - i, w + i * 2, h + i * 2, glowCol, 1);
+        }
+    }
+
+
+    private static void drawRarityShimmer(DrawContext ctx, int x, int y, int w, int h, RarityConfig rarity) {
+        MinecraftClient client = MinecraftClient.getInstance();
+        int ticks = client.world == null ? 0 : (int)(client.world.getTime() % 120);
+        int alpha = rarity == RarityConfig.MYTHIC ? 0x66 : rarity == RarityConfig.EPIC ? 0x44 : 0x2A;
+        int shineColor = (alpha << 24) | (rarity.borderPrimary & 0x00FFFFFF);
+        int stripeX = x + 2 + (ticks * Math.max(1, w - 8) / 120);
+        ctx.fill(stripeX, y + 3, Math.min(x + w - 3, stripeX + 2), y + h - 3, shineColor);
+
+        if (rarity == RarityConfig.MYTHIC) {
+            int sparkle = 0x88FFFFFF;
+            ctx.fill(x + 5 + (ticks % Math.max(1, w - 12)), y + 6, x + 7 + (ticks % Math.max(1, w - 12)), y + 8, sparkle);
+            ctx.fill(x + w - 11, y + h - 12 + (ticks % 5), x + w - 8, y + h - 9 + (ticks % 5), sparkle);
         }
     }
 

@@ -1,0 +1,23 @@
+{
+  "id": "blaze_imp",
+  "displayName": "Blaze Imp",
+  "type": "MINEMON",
+  "element": "EMBERA",
+  "rarity": "UNCOMMON",
+  "description": "A small but furious firestarter. Its burn lingers long after the initial hit.",
+  "art": {
+    "path": "blaze/blaze.png",
+    "type": "entity"
+  },
+  "maxHp": 44,
+  "baseAttack": 15,
+  "passiveAbility": "Burn",
+  "passiveDescription": "Deals 3 burn damage to attacker each turn for 2 turns.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "stamina_surge",
+  "displayName": "Stamina Surge",
+  "type": "TRAINER",
+  "element": "NEXA",
+  "rarity": "UNCOMMON",
+  "description": "Draw 1 card and gain 1 extra action this turn.",
+  "art": {
+    "path": "villager/villager.png",
+    "type": "entity"
+  },
+  "effect": "DRAW_CARDS",
+  "value": 1,
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

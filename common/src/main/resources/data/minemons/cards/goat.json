@@ -1,0 +1,23 @@
+{
+  "id": "goat",
+  "displayName": "Goat",
+  "type": "MINEMON",
+  "element": "TERRA",
+  "rarity": "UNCOMMON",
+  "description": "Stubborn and territorial, its headbutt disrupts the opponent's field.",
+  "art": {
+    "path": "goat/goat.png",
+    "type": "entity"
+  },
+  "maxHp": 50,
+  "baseAttack": 14,
+  "passiveAbility": "Headbutt",
+  "passiveDescription": "Can knock one opposing benched card back to opponent's hand.",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

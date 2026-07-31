@@ -1,0 +1,23 @@
+{
+  "id": "squid",
+  "displayName": "Squid",
+  "type": "MINEMON",
+  "element": "AQUA",
+  "rarity": "COMMON",
+  "description": "It releases a burst of ink that blinds and disorients attackers.",
+  "art": {
+    "path": "squid/squid.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 8,
+  "passiveAbility": "Ink Cloud",
+  "passiveDescription": "Lowers opponent's accuracy for 1 turn (-20% hit chance).",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "common",
+    "shine": false,
+    "shinyVariant": false
+  }
+}

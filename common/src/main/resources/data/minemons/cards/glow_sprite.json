@@ -1,0 +1,23 @@
+{
+  "id": "glow_sprite",
+  "displayName": "Glow Sprite",
+  "type": "MINEMON",
+  "element": "LUXA",
+  "rarity": "UNCOMMON",
+  "description": "It radiates warmth. The more light on the field, the stronger its healing.",
+  "art": {
+    "path": "allay/allay.png",
+    "type": "entity"
+  },
+  "maxHp": 40,
+  "baseAttack": 10,
+  "passiveAbility": "Light Heal",
+  "passiveDescription": "Heals based on number of LUXA cards currently on field (+3 per card).",
+  "neutralEnergy": false,
+  "balanceNotes": "Rebalanced for smoother 60-card deck pacing: rarity improves ceiling without making lower rarity cards obsolete.",
+  "visualRarity": {
+    "frame": "uncommon",
+    "shine": false,
+    "shinyVariant": false
+  }
+}
