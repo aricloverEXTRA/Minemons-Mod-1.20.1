@@ -1,0 +1,34 @@
+buildscript {
+    repositories { maven { url 'https://maven.fabricmc.net/' }; gradlePluginPortal(); mavenCentral() }
+    dependencies { classpath 'net.fabricmc:fabric-loom:1.5.7' }
+}
+
+apply plugin: 'fabric-loom'
+apply plugin: 'maven-publish'
+
+base {
+    archivesName = 'minemons-fabric'
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:1.20.1"
+    mappings "net.fabricmc:yarn:1.20.1+build.10:v2"
+    modImplementation "net.fabricmc:fabric-loader:0.16.14"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.92.11+1.20.1"
+}
+
+sourceSets.main.resources.srcDir project(':common').file('src/main/resources')
+
+processResources {
+    inputs.property 'version', project.version
+    filteringCharset 'UTF-8'
+    filesMatching('fabric.mod.json') {
+        expand 'version': project.version
+    }
+}
+
+jar {
+    if (rootProject.file('LICENSE').exists()) {
+        from(rootProject.file('LICENSE')) { rename { "${it}_minemons-fabric" } }
+    }
+}

@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="minemons"
+version="${version}"
+displayName="Minemons"
+logoFile="assets/minemons/icon.png"
+authors="MichemonsTeam"
+description='''
+A server-authoritative card battle mod inspired by Minecraft mobs. Collect, duel, and trade Minemons!
+'''
+
+[[dependencies.minemons]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.minemons]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.20.2)"
+ordering="NONE"
+side="BOTH"
