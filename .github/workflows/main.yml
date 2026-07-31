@@ -6,7 +6,6 @@ on:
 
 jobs:
   execute-code-changes:
-    # Only triggers if someone comments "@codex" on an open Pull Request
     if: |
       github.event.issue.pull_request && 
       startsWith(github.event.comment.body, '@codex')
@@ -17,46 +16,49 @@ jobs:
       issues: write
 
     steps:
-      # 1. Look up the exact branch the PR is running on
       - name: Get PR Branch Context
         uses: xt0rted/pull-request-comment-branch@v3
         id: comment-branch
 
-      # 2. Checkout the PR branch so git can track modifications
       - name: Checkout PR Branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: ${{ steps.comment-branch.outputs.head_ref }}
 
-      # 3. Isolate your text prompt from the "@codex" trigger phrase
-      - name: Parse Action Prompt
+      # SAFE STEP: Writes the comment body directly to a file to prevent shell interpretation
+      - name: Parse Action Prompt Safely
         id: parse
+        env:
+          RAW_PROMPT: ${{ github.event.comment.body }}
         run: |
-          RAW_PROMPT="${{ github.event.comment.body }}"
-          CLEAN_PROMPT=$(echo "$RAW_PROMPT" | sed 's/^@codex//g' | xargs)
-          echo "prompt=$CLEAN_PROMPT" >> $GITHUB_OUTPUT
+          cat << 'EOF' > user_prompt.txt
+          ${{ env.RAW_PROMPT }}
+          EOF
+          # Remove the '@codex' trigger phrase from the text file
+          sed -i 's/^@codex//g' user_prompt.txt
 
-      # 4. Run Codex in "unsafe" execution mode to let it manipulate files locally
       - name: Run Codex Execution
         uses: openai/codex-action@v1
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           safety-strategy: unsafe
+          # Read the clean prompt directly out of the text file
           prompt: |
             You are a senior Minecraft developer operating directly inside the project workspace.
             Your objective: Modify the files in this workspace to directly fulfill the user's request.
-            User Request: "${{ steps.parse.outputs.prompt }}"
+            
+            User Request:
+            $(cat user_prompt.txt)
             
             Instructions:
             - Rewrites, refactors, or new classes must be directly saved to their respective file paths.
             - Ensure code adheres to standard Java structure for Minecraft modding.
             - Do not output text conversations; directly apply the filesystem edits.
 
-      # 5. Check if files changed, and if so, push them straight back to the PR branch
       - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.email "github-actions[bot]@://github.com"
           
           if [ -n "$(git status --porcelain)" ]; then
             git add .
@@ -66,7 +68,6 @@ jobs:
             echo "No files were modified by the prompt."
           fi
 
-      # 6. Post a success confirmation back onto the comment thread
       - name: Confirm Execution
         if: success()
         uses: actions/github-script@v7
@@ -76,5 +77,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `✅ **Codex Execution Complete:** I have evaluated your prompt and pushed the necessary code fixes directly to this branch!`
+              body: `✅ **Codex Execution Complete:** Prompt parsed safely. I have modified the files and pushed the fixes straight to your branch!`
             });
